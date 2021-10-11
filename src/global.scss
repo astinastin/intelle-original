@@ -1,0 +1,116 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+.no-scroll {
+    --overflow: hidden;
+}
+
+
+  .ion-text-blue
+  {
+      color: blue;
+  }
+
+/*   app-newactivity{
+      width: 700px;
+  } */
+
+/*   app-learning {
+      width: 500px;
+      text-align: center;
+  } */
+
+  /* app-discussions {
+    width: 500px;
+} */
+
+
+// .scroll_container
+// {
+//   display: block;
+//     position: absolute;
+//     overflow: hidden;
+//     inset: 46px -60px 53px 20px;
+// }
+
+
+* {
+    font-size: 2.0rem;
+  }
+  
+  :root {
+    font-size: 0.4rem;
+  }
+
+  
+  .content-back{
+    --background: #f6efef !important;
+  }
+  app-itellige-home{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  activity-details
+  {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  app-mylearning{
+    padding-left: 50px !important;
+    padding-right: 100px !important;
+  }
+
+  app-learning{
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+    
+  }
+
+  app-discussions
+  {
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+  }
+
+  app-processes{
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+  }
+
+  app-activities
+  {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    
+  }
+
+  app-newactivity
+  {
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+  }

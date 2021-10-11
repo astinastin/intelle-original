@@ -1,0 +1,110 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.no-scroll {
+  --overflow: hidden;
+}
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+.scrollViewer
+{
+  display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 90%;
+    height: 100%;
+    overflow: hidden auto;
+    user-select: none;
+}
+
+.avatarStyle{
+  width: 25px;height: 25px;top: 5px;margin-top: 8px
+}
+
+.f20{
+  font-size: 20px;
+}
+
+.width100
+{
+  width: 100%;
+}
+
+.ml10{
+  margin-left: 10px;
+}
+
+.content-back{
+  --background: #f6efef
+}
+
+ion-input{
+  border: solid 1px black;
+}
+
+.preview{
+  width: 250px;
+  opacity: 1;
+  line-height: 1;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    /* display: flex; */
+    height: calc(100vh - 49px);
+    overflow: hidden;
+    overflow-style: auto;
+    border-left: 1px solid #E8E8E8;
+    z-index: 1001;
+    -webkit-transform: translate3d(0,0,0);
+    margin-left: auto;
+    background-color: #FFFFFF;
+}
+
+.forecast_container{
+  flex-wrap: nowrap;
+  overflow-x: scroll!important;
+  overflow-y: hidden;
+}
+
+::-webkit-scrollbar,
+*::-webkit-scrollbar {
+display: none;
+}
+
+ion-content {
+ 
+ &::-webkit-scrollbar {
+   display: none;
+ }
+ .menu_list ion-item{
+   font-weight: bold;
+   letter-spacing:0.5px;
+ }
+ }

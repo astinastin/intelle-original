@@ -1,0 +1,123 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      {{routeUrl}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content class="content-back" overflow-scroll="true" class="no-scroll">
+  <div class="scroll_container">
+    <div class="scrollViewer">
+      <ion-grid >
+        <ion-row style="height: 900px;">
+          <ion-col size="1"></ion-col>
+          <ion-col size="{{colSize.size1}}" style="background: white;">
+
+            <ion-list>
+              <ion-item lines="none">
+                <ion-avatar slot="start">
+                  <img class="avatarStyle" src="https://www.biography.com/.image/t_share/MTc5ODc1NTM4NjMyOTc2Mzcz/gettyimages-693134468.jpg">
+                </ion-avatar>
+                <ion-icon class="f20" name="notifications-outline"></ion-icon>
+                <ion-icon slot="end" class="f20" name="notifications-outline"></ion-icon>
+              </ion-item>
+            </ion-list>
+            <ion-searchbar showCancelButton="never"></ion-searchbar>
+             <ion-item-divider></ion-item-divider>
+            <ion-list class="menu_list">
+              <ion-item lines="none" (click)="navigateToHome();selectedTab='home'" [ngClass]="{'ion-text-blue':selectedTab == 'home'}">
+                <ion-icon [ngClass]="{'ion-text-blue':selectedTab == 'home'}" name="home-outline"></ion-icon><span style="margin-left: 6px;">Home</span>
+              </ion-item>
+              <ion-item lines="none" (click)="navigateToStudy();selectedTab='study'" [ngClass]="{'ion-text-blue':selectedTab == 'study'}">
+                <ion-icon [ngClass]="{'ion-text-blue':selectedTab == 'study'}" name="book-outline"></ion-icon><span style="margin-left: 6px;">Learning</span>
+              </ion-item>
+              <ion-item lines="none" (click)="navigateToDiscussions();selectedTab='discussions'" [ngClass]="{'ion-text-blue':selectedTab == 'discussions'}">
+                <ion-icon [ngClass]="{'ion-text-blue':selectedTab == 'discussions'}" name="chatbubbles-outline"></ion-icon><span style="margin-left: 6px;">Discussions</span>
+              </ion-item>
+              <ion-item lines="none" (click)="navigateToActivities();selectedTab='activities'" [ngClass]="{'ion-text-blue':selectedTab == 'activities'}">
+                <ion-icon [ngClass]="{'ion-text-blue':selectedTab == 'activities'}" name="document-outline"></ion-icon><span style="margin-left: 6px;">Activities</span>
+              </ion-item>
+              <ion-item lines="none" (click)="selectedTab='process';navigateToProceses()" [ngClass]="{'ion-text-blue':selectedTab == 'process'}">
+                <ion-icon  [ngClass]="{'ion-text-blue':selectedTab == 'process'}" name="analytics-outline"></ion-icon><span style="margin-left: 6px;">Processes</span>
+              </ion-item>
+            </ion-list>
+   
+            <ion-button (click)="navigateToNewActivities()" *ngIf="selectedTab == 'activities'" expand="round" >CREATE ACTIVITY</ion-button>
+          </ion-col>
+          <ion-col size="{{colSize.size2}}" style="background-color: #f3f3f3;" >
+            <div class="content-back" style="height: 100%;">
+              <ion-router-outlet></ion-router-outlet>
+            </div>
+          </ion-col>
+          <ion-col *ngIf="selectedTab!='activities'" style="background: white;" size="{{colSize.size3}}">
+            
+           <ion-card>
+            <p class="ml10">Recommended Channels</p>
+            <ion-card-header  *ngIf="selectedTab !='process'">
+              <ion-img [src]="'https://mdbootstrap.com/img/Photos/Others/images/76.jpg'"
+                class="width100"></ion-img>
+            </ion-card-header>
+             <ion-card-content>
+               <h4><b>Understanding Alternatives</b></h4>
+               <br>
+               <p><b>Live-edge Raw denim activated charcoal big pintrest street art hexagon selfies racletter</b></p>
+               <br>
+               <p>8 Episodes</p>
+               <br>
+               <ion-icon *ngIf="selectedTab =='process'" style="color: red;" name="person-outline"></ion-icon><span style="margin-left: 3px;">Complete with ARI</span>
+               <ion-badge  *ngIf="selectedTab !='process'" color="warning">
+                <ion-icon name="git-network-outline"></ion-icon>20
+              </ion-badge>
+             </ion-card-content>
+      
+             <p class="ml10">Recommended Channels</p>
+             <ion-card-header  *ngIf="selectedTab !='process'">
+               <ion-img [src]="'https://mdbootstrap.com/img/Photos/Others/images/76.jpg'"
+                class="width100"></ion-img>
+             </ion-card-header>
+              <ion-card-content>
+                <h4><b>Understanding Alternatives</b></h4>
+                <br>
+                <p><b>Live-edge Raw denim activated charcoal big pintrest street art hexagon selfies racletter</b></p>
+                <br>
+                <p>8 Episodes</p>
+                <br>
+                <ion-icon *ngIf="selectedTab =='process'" style="color: red;" name="person-outline"></ion-icon><span style="margin-left: 3px;">Complete with ARI</span>
+                <ion-badge  *ngIf="selectedTab !='process'" color="warning">
+                 <ion-icon name="git-network-outline"></ion-icon>20
+               </ion-badge>
+              </ion-card-content>
+      
+              <p class="ml10">Recommended Channels</p>
+              <ion-card-header  *ngIf="selectedTab !='process'">
+                <ion-img [src]="'https://mdbootstrap.com/img/Photos/Others/images/76.jpg'"
+                 class="width100"></ion-img>
+              </ion-card-header>
+               <ion-card-content>
+                 <h4><b>Understanding Alternatives</b></h4>
+                 <br>
+                 <p><b>Live-edge Raw denim activated charcoal big pintrest street art hexagon selfies racletter</b></p>
+                 <br>
+                 <p>8 Episodes</p>
+                 <br>
+                 <ion-icon *ngIf="selectedTab =='process'" style="color: red;" name="person-outline"></ion-icon><span style="margin-left: 3px;">Complete with ARI</span>
+                 <ion-badge  *ngIf="selectedTab !='process'" color="warning">
+                  <ion-icon name="git-network-outline"></ion-icon>20
+                </ion-badge>
+               </ion-card-content>
+           </ion-card>
+           
+          </ion-col>
+        </ion-row>
+       </ion-grid>
+    </div>
+  </div>
+<!--  <div class="preview">
+  <div style="padding: 10px;">
+    <ion-input placeholder="Make a Comment"></ion-input>
+  </div>
+  <ion-badge style="float: right;" color="light">Cancel</ion-badge>
+  <ion-badge style="float: right;margin-right: 25px;" color="light">Submit</ion-badge>
+ </div> -->
+</ion-content>

@@ -1,0 +1,16 @@
+<ion-header style="background: white !important;color: black !important;">
+  <ion-segment [(ngModel)]="selectedTab" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="myprocesses">
+      <ion-label>MY PROCESSES</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="library">
+      <ion-label>LIBRARY</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-router-outlet></ion-router-outlet>
+   </div>
+</ion-content>
