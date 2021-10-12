@@ -7,279 +7,282 @@
   </ion-toolbar>
 </ion-header>
 <ion-content >
-  <ion-grid>
-    <ion-row>
-      <ion-col size="3">
-        <ion-card style="background: black;color: white;" >
-          <ion-card-header>
-            <ion-card-title style="color: white;">ON HOLD
-              <span>
-                <ion-icon style="color: white;float:right;" name="ellipsis-vertical-outline"></ion-icon>
+  <div class="hideScroll">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3">
+          <ion-card style="background: black;color: white;" >
+            <ion-card-header>
+              <ion-card-title style="color: white;">ON HOLD
+                <span>
+                  <ion-icon style="color: white;float:right;" name="ellipsis-vertical-outline"></ion-icon>
+  
+                </span>
+              </ion-card-title>
+            </ion-card-header>
+          </ion-card>
+          <ion-card (click)="getActivityDetails()">
+            <ion-card-header>
+              <ion-card-title><b>LIPSUM TASK</b></ion-card-title>
+            </ion-card-header>
+            <ion-card-content style="padding: 0px !important;">
+              <ion-img [src]="'https://mdbootstrap.com/img/Photos/Others/images/76.jpg'" no-margin no-padding
+                style="width: 100%;"></ion-img>
+            </ion-card-content>
+            <ion-card-content>
+              <p>Communication Leadership</p>
+              <br>
+              <b>Greyhound Diversly hello coldly wonderfully marginally far</b>
+              <br>
+              <div style="margin-top: 10px;">
+                Due Sunday 31 march 2019 at 4:30pm
+              </div>
+              <ion-badge style="margin-top: 10px;" color="warning">
+                <ion-icon name="git-network-outline"></ion-icon>1
+              </ion-badge>
+              <ion-badge color="danger" style="margin-left: 5px;">
+                <ion-icon name="alert-circle-outline"></ion-icon> <span style="margin-left: 2px;">Mandatory</span>
+              </ion-badge>
+              <ion-badge color="light" style="margin-left: 5px;">
+                <ion-icon name="time-outline"></ion-icon>30m
+              </ion-badge>
+            </ion-card-content>
+  
+          </ion-card>
+        </ion-col>
+        <ion-col size="3">
+          <ion-card style="background: blue;color: white;">
+            <ion-card-header>
+              <ion-card-title style="color: white;">TO DO
+                <span>
+                  <ion-icon style="color: white;float:right;" name="ellipsis-vertical-outline"></ion-icon>
+  
+                </span>
+              </ion-card-title>
+            </ion-card-header>
+          </ion-card>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title><b>LIPSUM TASK</b></ion-card-title>
+            </ion-card-header>
+            <ion-card-content  style="padding: 0px !important;">
+              <ion-img [src]="'https://mdbootstrap.com/img/Photos/Others/images/76.jpg'" no-margin no-padding
+                style="width: 100%;"></ion-img>
+            </ion-card-content>
+            <ion-card-content>
+              <p>Communication Leadership</p>
+              <br>
+              <b>Greyhound Diversly hello coldly wonderfully marginally far</b>
+              <br>
+              <div style="margin-top: 10px;">
+                Due Sunday 31 march 2019 at 4:30pm
+              </div>
+              <ion-badge style="margin-top: 10px;" color="warning">
+                <ion-icon name="git-network-outline"></ion-icon>1
+              </ion-badge>
+              <ion-badge color="danger" style="margin-left: 5px;">
+                <ion-icon name="alert-circle-outline"></ion-icon> <span style="margin-left: 2px;">Mandatory</span>
+              </ion-badge>
+              <ion-badge color="light" style="margin-left: 5px;">
+                <ion-icon name="time-outline"></ion-icon>30m
+              </ion-badge>
+            </ion-card-content>
+  
+          </ion-card>
+        </ion-col>
+        <ion-col size="3">
+          <ion-card style="background: turquoise;color: white;">
+            <ion-card-header>
+              <ion-card-title style="color: white;">DOING
+                <span>
+                  <ion-icon style="color: white;float:right;" name="ellipsis-vertical-outline"></ion-icon>
+  
+                </span>
+              </ion-card-title>
+            </ion-card-header>
+          </ion-card>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title><b>LIPSUM TASK</b></ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <p>Communication Leadership</p>
+              <br>
+              <b>Greyhound Diversly hello coldly wonderfully marginally far</b>
+              <br>
+              <div style="margin-top: 10px;">
+                Due Sunday 31 march 2019 at 4:30pm
+              </div>
+              <ion-badge style="margin-top: 10px;" color="warning">
+                <ion-icon name="git-network-outline"></ion-icon>1
+              </ion-badge>
+              <ion-badge color="danger" style="margin-left: 5px;">
+                <ion-icon name="alert-circle-outline"></ion-icon> <span style="margin-left: 2px;">Mandatory</span>
+              </ion-badge>
+              <ion-badge color="light" style="margin-left: 5px;">
+                <ion-icon name="time-outline"></ion-icon>30m
+              </ion-badge>
+            </ion-card-content>
+  
+          </ion-card>
+        </ion-col>
+        <ion-col size="3">
+          <ion-card style="background: green;color: white;">
+            <ion-card-header>
+              <ion-card-title style="color: white;">DONE
+                <span>
+                  <ion-icon style="color: white;float:right;" name="ellipsis-vertical-outline"></ion-icon>
+  
+                </span>
+              </ion-card-title>
+            </ion-card-header>
+          </ion-card>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title><b>LIPSUM TASK</b></ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <p>Communication Leadership</p>
+              <br>
+              <b>Greyhound Diversly hello coldly wonderfully marginally far</b>
+              <br>
+              <div style="margin-top: 10px;">
+                Due Sunday 31 march 2019 at 4:30pm
+              </div>
+              <ion-badge style="margin-top: 10px;" color="warning">
+                <ion-icon name="git-network-outline"></ion-icon>1
+              </ion-badge>
+              <ion-badge color="danger" style="margin-left: 5px;">
+                <ion-icon name="alert-circle-outline"></ion-icon> <span style="margin-left: 2px;">Mandatory</span>
+              </ion-badge>
+              <ion-badge color="light" style="margin-left: 5px;">
+                <ion-icon name="time-outline"></ion-icon>30m
+              </ion-badge>
+            </ion-card-content>
+  
+          </ion-card>
+        </ion-col>
+  
+        <ion-col size="3">
+          
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title><b>LIPSUM TASK</b></ion-card-title>
+            </ion-card-header>
+            <ion-card-content style="padding: 0px !important;">
+              <ion-img [src]="'https://mdbootstrap.com/img/Photos/Others/images/76.jpg'" no-margin no-padding
+                style="width: 100%;"></ion-img>
+            </ion-card-content>
+            <ion-card-content>
+              <p>Communication Leadership</p>
+              <br>
+              <b>Greyhound Diversly hello coldly wonderfully marginally far</b>
+              <br>
+              <div style="margin-top: 10px;">
+                Due Sunday 31 march 2019 at 4:30pm
+              </div>
+              <ion-badge style="margin-top: 10px;" color="warning">
+                <ion-icon name="git-network-outline"></ion-icon>1
+              </ion-badge>
+              <ion-badge color="danger" style="margin-left: 5px;">
+                <ion-icon name="alert-circle-outline"></ion-icon> <span style="margin-left: 2px;">Mandatory</span>
+              </ion-badge>
+              <ion-badge color="light" style="margin-left: 5px;">
+                <ion-icon name="time-outline"></ion-icon>30m
+              </ion-badge>
+            </ion-card-content>
+  
+          </ion-card>
+        </ion-col>
+  
+        <ion-col size="3">
+          
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title><b>LIPSUM TASK</b></ion-card-title>
+            </ion-card-header>
+            <ion-card-content style="padding: 0px !important;">
+              <ion-img [src]="'https://mdbootstrap.com/img/Photos/Others/images/76.jpg'" no-margin no-padding
+                style="width: 100%;"></ion-img>
+            </ion-card-content>
+            <ion-card-content>
+              <p>Communication Leadership</p>
+              <br>
+              <b>Greyhound Diversly hello coldly wonderfully marginally far</b>
+              <br>
+              <div style="margin-top: 10px;">
+                Due Sunday 31 march 2019 at 4:30pm
+              </div>
+              <ion-badge style="margin-top: 10px;" color="warning">
+                <ion-icon name="git-network-outline"></ion-icon>1
+              </ion-badge>
+              <ion-badge color="danger" style="margin-left: 5px;">
+                <ion-icon name="alert-circle-outline"></ion-icon> <span style="margin-left: 2px;">Mandatory</span>
+              </ion-badge>
+              <ion-badge color="light" style="margin-left: 5px;">
+                <ion-icon name="time-outline"></ion-icon>30m
+              </ion-badge>
+            </ion-card-content>
+  
+          </ion-card>
+        </ion-col>
+  
+        <ion-col size="3">
+          
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title><b>LIPSUM TASK</b></ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <p>Communication Leadership</p>
+              <br>
+              <b>Greyhound Diversly hello coldly wonderfully marginally far</b>
+              <br>
+              <div style="margin-top: 10px;">
+                Due Sunday 31 march 2019 at 4:30pm
+              </div>
+              <ion-badge style="margin-top: 10px;" color="warning">
+                <ion-icon name="git-network-outline"></ion-icon>1
+              </ion-badge>
+              <ion-badge color="danger" style="margin-left: 5px;">
+                <ion-icon name="alert-circle-outline"></ion-icon> <span style="margin-left: 2px;">Mandatory</span>
+              </ion-badge>
+              <ion-badge color="light" style="margin-left: 5px;">
+                <ion-icon name="time-outline"></ion-icon>30m
+              </ion-badge>
+            </ion-card-content>
+  
+          </ion-card>
+        </ion-col>
+  
+        <ion-col size="3">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title><b>LIPSUM TASK</b></ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <p>Communication Leadership</p>
+              <br>
+              <b>Greyhound Diversly hello coldly wonderfully marginally far</b>
+              <br>
+              <div style="margin-top: 10px;">
+                Due Sunday 31 march 2019 at 4:30pm
+              </div>
+              <ion-badge style="margin-top: 10px;" color="warning">
+                <ion-icon name="git-network-outline"></ion-icon>1
+              </ion-badge>
+              <ion-badge color="danger" style="margin-left: 5px;">
+                <ion-icon name="alert-circle-outline"></ion-icon> <span style="margin-left: 2px;">Mandatory</span>
+              </ion-badge>
+              <ion-badge color="light" style="margin-left: 5px;">
+                <ion-icon name="time-outline"></ion-icon>30m
+              </ion-badge>
+            </ion-card-content>
+  
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 
-              </span>
-            </ion-card-title>
-          </ion-card-header>
-        </ion-card>
-        <ion-card (click)="getActivityDetails()">
-          <ion-card-header>
-            <ion-card-title><b>LIPSUM TASK</b></ion-card-title>
-          </ion-card-header>
-          <ion-card-content style="padding: 0px !important;">
-            <ion-img [src]="'https://mdbootstrap.com/img/Photos/Others/images/76.jpg'" no-margin no-padding
-              style="width: 100%;"></ion-img>
-          </ion-card-content>
-          <ion-card-content>
-            <p>Communication Leadership</p>
-            <br>
-            <b>Greyhound Diversly hello coldly wonderfully marginally far</b>
-            <br>
-            <div style="margin-top: 10px;">
-              Due Sunday 31 march 2019 at 4:30pm
-            </div>
-            <ion-badge style="margin-top: 10px;" color="warning">
-              <ion-icon name="git-network-outline"></ion-icon>1
-            </ion-badge>
-            <ion-badge color="danger" style="margin-left: 5px;">
-              <ion-icon name="alert-circle-outline"></ion-icon> <span style="margin-left: 2px;">Mandatory</span>
-            </ion-badge>
-            <ion-badge color="light" style="margin-left: 5px;">
-              <ion-icon name="time-outline"></ion-icon>30m
-            </ion-badge>
-          </ion-card-content>
-
-        </ion-card>
-      </ion-col>
-      <ion-col size="3">
-        <ion-card style="background: blue;color: white;">
-          <ion-card-header>
-            <ion-card-title style="color: white;">TO DO
-              <span>
-                <ion-icon style="color: white;float:right;" name="ellipsis-vertical-outline"></ion-icon>
-
-              </span>
-            </ion-card-title>
-          </ion-card-header>
-        </ion-card>
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title><b>LIPSUM TASK</b></ion-card-title>
-          </ion-card-header>
-          <ion-card-content  style="padding: 0px !important;">
-            <ion-img [src]="'https://mdbootstrap.com/img/Photos/Others/images/76.jpg'" no-margin no-padding
-              style="width: 100%;"></ion-img>
-          </ion-card-content>
-          <ion-card-content>
-            <p>Communication Leadership</p>
-            <br>
-            <b>Greyhound Diversly hello coldly wonderfully marginally far</b>
-            <br>
-            <div style="margin-top: 10px;">
-              Due Sunday 31 march 2019 at 4:30pm
-            </div>
-            <ion-badge style="margin-top: 10px;" color="warning">
-              <ion-icon name="git-network-outline"></ion-icon>1
-            </ion-badge>
-            <ion-badge color="danger" style="margin-left: 5px;">
-              <ion-icon name="alert-circle-outline"></ion-icon> <span style="margin-left: 2px;">Mandatory</span>
-            </ion-badge>
-            <ion-badge color="light" style="margin-left: 5px;">
-              <ion-icon name="time-outline"></ion-icon>30m
-            </ion-badge>
-          </ion-card-content>
-
-        </ion-card>
-      </ion-col>
-      <ion-col size="3">
-        <ion-card style="background: turquoise;color: white;">
-          <ion-card-header>
-            <ion-card-title style="color: white;">DOING
-              <span>
-                <ion-icon style="color: white;float:right;" name="ellipsis-vertical-outline"></ion-icon>
-
-              </span>
-            </ion-card-title>
-          </ion-card-header>
-        </ion-card>
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title><b>LIPSUM TASK</b></ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <p>Communication Leadership</p>
-            <br>
-            <b>Greyhound Diversly hello coldly wonderfully marginally far</b>
-            <br>
-            <div style="margin-top: 10px;">
-              Due Sunday 31 march 2019 at 4:30pm
-            </div>
-            <ion-badge style="margin-top: 10px;" color="warning">
-              <ion-icon name="git-network-outline"></ion-icon>1
-            </ion-badge>
-            <ion-badge color="danger" style="margin-left: 5px;">
-              <ion-icon name="alert-circle-outline"></ion-icon> <span style="margin-left: 2px;">Mandatory</span>
-            </ion-badge>
-            <ion-badge color="light" style="margin-left: 5px;">
-              <ion-icon name="time-outline"></ion-icon>30m
-            </ion-badge>
-          </ion-card-content>
-
-        </ion-card>
-      </ion-col>
-      <ion-col size="3">
-        <ion-card style="background: green;color: white;">
-          <ion-card-header>
-            <ion-card-title style="color: white;">DONE
-              <span>
-                <ion-icon style="color: white;float:right;" name="ellipsis-vertical-outline"></ion-icon>
-
-              </span>
-            </ion-card-title>
-          </ion-card-header>
-        </ion-card>
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title><b>LIPSUM TASK</b></ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <p>Communication Leadership</p>
-            <br>
-            <b>Greyhound Diversly hello coldly wonderfully marginally far</b>
-            <br>
-            <div style="margin-top: 10px;">
-              Due Sunday 31 march 2019 at 4:30pm
-            </div>
-            <ion-badge style="margin-top: 10px;" color="warning">
-              <ion-icon name="git-network-outline"></ion-icon>1
-            </ion-badge>
-            <ion-badge color="danger" style="margin-left: 5px;">
-              <ion-icon name="alert-circle-outline"></ion-icon> <span style="margin-left: 2px;">Mandatory</span>
-            </ion-badge>
-            <ion-badge color="light" style="margin-left: 5px;">
-              <ion-icon name="time-outline"></ion-icon>30m
-            </ion-badge>
-          </ion-card-content>
-
-        </ion-card>
-      </ion-col>
-
-      <ion-col size="3">
-        
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title><b>LIPSUM TASK</b></ion-card-title>
-          </ion-card-header>
-          <ion-card-content style="padding: 0px !important;">
-            <ion-img [src]="'https://mdbootstrap.com/img/Photos/Others/images/76.jpg'" no-margin no-padding
-              style="width: 100%;"></ion-img>
-          </ion-card-content>
-          <ion-card-content>
-            <p>Communication Leadership</p>
-            <br>
-            <b>Greyhound Diversly hello coldly wonderfully marginally far</b>
-            <br>
-            <div style="margin-top: 10px;">
-              Due Sunday 31 march 2019 at 4:30pm
-            </div>
-            <ion-badge style="margin-top: 10px;" color="warning">
-              <ion-icon name="git-network-outline"></ion-icon>1
-            </ion-badge>
-            <ion-badge color="danger" style="margin-left: 5px;">
-              <ion-icon name="alert-circle-outline"></ion-icon> <span style="margin-left: 2px;">Mandatory</span>
-            </ion-badge>
-            <ion-badge color="light" style="margin-left: 5px;">
-              <ion-icon name="time-outline"></ion-icon>30m
-            </ion-badge>
-          </ion-card-content>
-
-        </ion-card>
-      </ion-col>
-
-      <ion-col size="3">
-        
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title><b>LIPSUM TASK</b></ion-card-title>
-          </ion-card-header>
-          <ion-card-content style="padding: 0px !important;">
-            <ion-img [src]="'https://mdbootstrap.com/img/Photos/Others/images/76.jpg'" no-margin no-padding
-              style="width: 100%;"></ion-img>
-          </ion-card-content>
-          <ion-card-content>
-            <p>Communication Leadership</p>
-            <br>
-            <b>Greyhound Diversly hello coldly wonderfully marginally far</b>
-            <br>
-            <div style="margin-top: 10px;">
-              Due Sunday 31 march 2019 at 4:30pm
-            </div>
-            <ion-badge style="margin-top: 10px;" color="warning">
-              <ion-icon name="git-network-outline"></ion-icon>1
-            </ion-badge>
-            <ion-badge color="danger" style="margin-left: 5px;">
-              <ion-icon name="alert-circle-outline"></ion-icon> <span style="margin-left: 2px;">Mandatory</span>
-            </ion-badge>
-            <ion-badge color="light" style="margin-left: 5px;">
-              <ion-icon name="time-outline"></ion-icon>30m
-            </ion-badge>
-          </ion-card-content>
-
-        </ion-card>
-      </ion-col>
-
-      <ion-col size="3">
-        
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title><b>LIPSUM TASK</b></ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <p>Communication Leadership</p>
-            <br>
-            <b>Greyhound Diversly hello coldly wonderfully marginally far</b>
-            <br>
-            <div style="margin-top: 10px;">
-              Due Sunday 31 march 2019 at 4:30pm
-            </div>
-            <ion-badge style="margin-top: 10px;" color="warning">
-              <ion-icon name="git-network-outline"></ion-icon>1
-            </ion-badge>
-            <ion-badge color="danger" style="margin-left: 5px;">
-              <ion-icon name="alert-circle-outline"></ion-icon> <span style="margin-left: 2px;">Mandatory</span>
-            </ion-badge>
-            <ion-badge color="light" style="margin-left: 5px;">
-              <ion-icon name="time-outline"></ion-icon>30m
-            </ion-badge>
-          </ion-card-content>
-
-        </ion-card>
-      </ion-col>
-
-      <ion-col size="3">
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title><b>LIPSUM TASK</b></ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <p>Communication Leadership</p>
-            <br>
-            <b>Greyhound Diversly hello coldly wonderfully marginally far</b>
-            <br>
-            <div style="margin-top: 10px;">
-              Due Sunday 31 march 2019 at 4:30pm
-            </div>
-            <ion-badge style="margin-top: 10px;" color="warning">
-              <ion-icon name="git-network-outline"></ion-icon>1
-            </ion-badge>
-            <ion-badge color="danger" style="margin-left: 5px;">
-              <ion-icon name="alert-circle-outline"></ion-icon> <span style="margin-left: 2px;">Mandatory</span>
-            </ion-badge>
-            <ion-badge color="light" style="margin-left: 5px;">
-              <ion-icon name="time-outline"></ion-icon>30m
-            </ion-badge>
-          </ion-card-content>
-
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
 </ion-content>

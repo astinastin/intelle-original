@@ -10,7 +10,7 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <div>
+  <div class="hideScroll">
     <ion-card>
 
       <ion-card-header class="p0">
@@ -80,51 +80,53 @@
 
       </ion-card-content>
     </ion-card>
+
+    <ion-card>
+      <ion-card-header>Comments 5</ion-card-header>
+  
+      <ion-row>
+        <ion-col size="1">
+          <ion-avatar style="margin-top: 35px;">
+            <img style="width: 25px;height: 25px;"
+              src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+          </ion-avatar>
+        </ion-col>
+        <ion-col>
+          <ion-item class="classter" style="margin-top: 25px;">
+            <ion-input type="text" [(ngModel)]="newComment" placeholder="Add a Comment"></ion-input>
+            <ion-icon class="font-size: 20px;" slot="end" name="attach-outline"></ion-icon>
+            <ion-icon class="font-size: 20px;" (click)="addNewComment()" style="margin-left: 5px;" name="send-outline">
+            </ion-icon>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+  
+      <ion-row style="margin-top: 10px;padding: 15px;" *ngFor="let comment of discussion.comments">
+        <ion-col size="1">
+          <ion-avatar style="margin-top: 35px;">
+            <img style="width: 25px;height: 25px;"
+              src="{{comment.profileImage ? comment.profileImage : 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y'}}">
+          </ion-avatar>
+        </ion-col>
+        <ion-col style="background: #f8f8f8">
+          <p>{{comment?.fullName}} &nbsp; {{comment?.datePosted | date : 'medium'}}</p>
+          <div class="classter">
+            <b>{{comment?.comment}}</b>
+            <div style="margin-top: 50px;">
+              <ion-icon style="font-size: 20px;" name="share-social-outline"></ion-icon>
+              <ion-badge (click)="presentAskExpertModal()"
+                style="padding: 5px;border: 2px solid;border-radius: 50px;margin-left: 40px;" color="light">Ask an Expert
+              </ion-badge>
+              <ion-icon (click)="bookMarkComment(comment)" style="margin-left: 40px;font-size: 20px;"
+                name="bookmark-outline"></ion-icon>
+              <ion-icon style="font-size: 20px;float: right;" name="bookmark-outline"></ion-icon>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+  
+    </ion-card>
   </div>
 
-  <ion-card>
-    <ion-card-header>Comments 5</ion-card-header>
-
-    <ion-row>
-      <ion-col size="1">
-        <ion-avatar style="margin-top: 35px;">
-          <img style="width: 25px;height: 25px;"
-            src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-        </ion-avatar>
-      </ion-col>
-      <ion-col>
-        <ion-item class="classter" style="margin-top: 25px;">
-          <ion-input type="text" [(ngModel)]="newComment" placeholder="Add a Comment"></ion-input>
-          <ion-icon class="font-size: 20px;" slot="end" name="attach-outline"></ion-icon>
-          <ion-icon class="font-size: 20px;" (click)="addNewComment()" style="margin-left: 5px;" name="send-outline">
-          </ion-icon>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-
-    <ion-row style="margin-top: 10px;padding: 15px;" *ngFor="let comment of discussion.comments">
-      <ion-col size="1">
-        <ion-avatar style="margin-top: 35px;">
-          <img style="width: 25px;height: 25px;"
-            src="{{comment.profileImage ? comment.profileImage : 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y'}}">
-        </ion-avatar>
-      </ion-col>
-      <ion-col style="background: #f8f8f8">
-        <p>{{comment?.fullName}} &nbsp; {{comment?.datePosted | date : 'medium'}}</p>
-        <div class="classter">
-          <b>{{comment?.comment}}</b>
-          <div style="margin-top: 50px;">
-            <ion-icon style="font-size: 20px;" name="share-social-outline"></ion-icon>
-            <ion-badge (click)="presentAskExpertModal()"
-              style="padding: 5px;border: 2px solid;border-radius: 50px;margin-left: 40px;" color="light">Ask an Expert
-            </ion-badge>
-            <ion-icon (click)="bookMarkComment(comment)" style="margin-left: 40px;font-size: 20px;"
-              name="bookmark-outline"></ion-icon>
-            <ion-icon style="font-size: 20px;float: right;" name="bookmark-outline"></ion-icon>
-          </div>
-        </div>
-      </ion-col>
-    </ion-row>
-
-  </ion-card>
+  
 </ion-content>
