@@ -11,9 +11,9 @@ const routes: Routes = [
     path: '',
     component: ProcessesPage,
     children: [
-      { path: 'my-processes', component: MyprocessesComponent, data: { title: 'HOME > PROCESSES > MY PROCESSES' } },
-      { path: 'library', component: LibraryComponent, data: { title: 'HOME > PROCESSES > LIBRARY' } },
-      { path: 'process-details', component: ProcessDetailsComponent, data: { title: 'HOME > PROCESSES > PROCESS DETAILS' } },
+      { path: 'my-processes', component: MyprocessesComponent, data: { title: 'MY PROCESSES' } },
+      { path: 'library', component: LibraryComponent, data: { title: 'LIBRARY' } },
+      { path: 'process-details', component: ProcessDetailsComponent, data: { title: 'PROCESS DETAILS' } },
     ],
 
   },

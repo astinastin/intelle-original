@@ -31,7 +31,16 @@ margin-top: 25px;
 .content-back{
     --background: #f6efef
   }
+  
+  .mt25
+  {
+    margin-top: 25px;
+  }
 
+  .ml-5
+  {
+    margin-left: 5px;
+  }
 
   .container {
     position: relative;
@@ -69,3 +78,4 @@ margin-top: 25px;
     left: 50%;
     transform: translate(-50%, -50%);
   }
+

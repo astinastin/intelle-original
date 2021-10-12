@@ -1,4 +1,4 @@
-<ion-header style="background: white !important;color: black !important;">
+<ion-header *ngIf="routeUrl != 'PROCESS DETAILS'" style="background: white !important;color: black !important;">
   <ion-segment [(ngModel)]="selectedTab" (ionChange)="segmentChanged($event)">
     <ion-segment-button value="myprocesses">
       <ion-label>MY PROCESSES</ion-label>

@@ -57,11 +57,11 @@
     padding-right: 100px;
   }
 
-  app-mylearning{
+  /* app-mylearning{
     padding-left: 50px !important;
     padding-right: 100px !important;
   }
-
+ */
   app-learning{
     padding-left: 50px !important;
     padding-right: 50px !important;
@@ -97,8 +97,16 @@
     --height: 40%;
   }
 
-  .popover-content{
+
+  .discussion-class .popover-content {
     top: 450px !important;
     left: 200px !important;
     position: fixed;
+  }
+
+  .search-placeholder-class .popover-content {
+    top: 135px !important;
+    left: 18px !important;
+    position: fixed;
+    width: 200px;
   }

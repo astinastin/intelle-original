@@ -7,6 +7,7 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { RecommendationsComponent } from '../recommendations/recommendations.component';
 import { DiscussionpopoverComponent } from './components/popovers/discussionpopover/discussionpopover.component';
+import { SearchSuggestionsPopover } from './components/popovers/search-suggestions-popover/search-suggestions-popover.component';
 
 
 @NgModule({
@@ -16,6 +17,6 @@ import { DiscussionpopoverComponent } from './components/popovers/discussionpopo
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage,RecommendationsComponent,DiscussionpopoverComponent]
+  declarations: [HomePage,RecommendationsComponent,DiscussionpopoverComponent,SearchSuggestionsPopover]
 })
 export class HomePageModule {}

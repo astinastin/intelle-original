@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationError, ActivatedRoute, ActivationStart, ActivationEnd } from '@angular/router';
 import { PopoverController } from '@ionic/angular';
 import { DiscussionpopoverComponent } from './components/popovers/discussionpopover/discussionpopover.component';
+import { SearchSuggestionsPopover } from './components/popovers/search-suggestions-popover/search-suggestions-popover.component';
 
 @Component({
   selector: 'app-home',
@@ -101,7 +102,17 @@ export class HomePage {
     const popover = await this.popoverController.create({
       component: DiscussionpopoverComponent,
       translucent: true,
-      showBackdrop: false
+      showBackdrop: false,cssClass : 'discussion-class'
+    });
+    return await popover.present();
+  }
+
+  async openSearchSuggestionsPopover() {
+    const popover = await this.popoverController.create({
+      component: SearchSuggestionsPopover,
+      translucent: true,
+      showBackdrop: false,
+      cssClass : 'search-placeholder-class'
     });
     return await popover.present();
   }
