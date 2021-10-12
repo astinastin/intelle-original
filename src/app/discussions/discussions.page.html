@@ -1,4 +1,4 @@
-<ion-header style="background: white !important;color: black !important;">
+<ion-header *ngIf="routeUrl != 'DISCUSSIONS'" style="background: white !important;color: black !important;">
   <ion-segment [(ngModel)]="selectedTab" (ionChange)="segmentChanged($event)">
     <ion-segment-button value="mydiscussionss">
       <ion-label>DISCUSSIONS</ion-label>

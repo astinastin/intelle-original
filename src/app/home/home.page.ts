@@ -94,7 +94,7 @@ export class HomePage {
 
   navigateToProceses() {
     this.setColSize(2, 7, 3)
-    this.router.navigate(['/home/prcoesses/my-processes'])
+    this.router.navigate(['/home/processes/my-processes'])
   }
 
   async openCreateDiscussionsPopover() {

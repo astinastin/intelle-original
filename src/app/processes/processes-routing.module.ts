@@ -4,20 +4,22 @@ import { MyprocessesComponent } from './my-processes/my-processes.component';
 
 import { ProcessesPage } from './processes.page';
 import { LibraryComponent } from './library/library.component';
+import { ProcessDetailsComponent } from './components/process-details/process-details-details.component';
 
 const routes: Routes = [
   {
     path: '',
     component: ProcessesPage,
     children: [
-      { path: 'my-processes', component: MyprocessesComponent ,data: { title: 'HOME > PROCESSES > MY PROCESSES' }},
-      { path: 'library', component: LibraryComponent,data: { title: 'HOME > PROCESSES > LIBRARY' } },
+      { path: 'my-processes', component: MyprocessesComponent, data: { title: 'HOME > PROCESSES > MY PROCESSES' } },
+      { path: 'library', component: LibraryComponent, data: { title: 'HOME > PROCESSES > LIBRARY' } },
+      { path: 'process-details', component: ProcessDetailsComponent, data: { title: 'HOME > PROCESSES > PROCESS DETAILS' } },
     ],
 
   },
   {
     path: '',
-    redirectTo: 'my-discussionss',
+    redirectTo: 'my-processes',
     pathMatch: 'full'
   },
 ];

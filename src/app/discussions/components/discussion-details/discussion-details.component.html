@@ -1,0 +1,130 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="discussions"></ion-back-button>
+    </ion-buttons>
+    <ion-icon (click)="saveDiscussions()" class="ml15" style="font-size: 24px;" slot="end" name="bookmark-outline">
+    </ion-icon>
+    <ion-icon class="ml15" style="font-size: 24px;" slot="end" name="share-social-outline"></ion-icon>
+    <ion-icon class="ml15" slot="end" style="font-size: 24px;" name="ellipsis-vertical-outline"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div>
+    <ion-card>
+
+      <ion-card-header class="p0">
+        <ion-img [src]="'https://mdbootstrap.com/img/Photos/Others/images/76.jpg'" class="w100"></ion-img>
+      </ion-card-header>
+
+      <ion-card-content style="padding: 10px;">
+        <p class="mt15">Created By <span style="color: blue;">Franchis Paramore</span> on {{ "21:08:1998" | date : 'medium'}}</p>
+        <br>
+        <ion-badge color="danger" class="ml5 mt15">
+          <span class="ml2">Content Related</span>
+        </ion-badge>
+        <br>
+        <ion-card-title class="mt15"><b>Duis aute irure dolor in reprehenderit in volupate velit esse</b></ion-card-title>
+        <br>
+        <p>
+          At vero et accumsas et lusto odio dignissimos ducimus qui blanditiss prease ntium voluntium delenti atque
+          corrupti quos dolores et quas excepturi sint
+        </p>
+
+        <p style="margin-top: 50px;" class="ml15">Attachments 5</p>
+
+        <div style="margin-top: 10px;">
+          <ion-list>
+            <ion-item>
+              <ion-thumbnail style="width: 50px;height: 50px;" slot="start">
+                <img src="https://mdbootstrap.com/img/Photos/Others/images/76.jpg">
+              </ion-thumbnail>
+              <ion-label>
+                <p>
+                  test
+                </p>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-thumbnail style="width: 50px;height: 50px;" slot="start">
+                <img src="https://mdbootstrap.com/img/Photos/Others/images/76.jpg">
+              </ion-thumbnail>
+              <ion-label>
+                <p>
+                  test
+                </p>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-thumbnail style="width: 50px;height: 50px;" slot="start">
+                <img src="https://mdbootstrap.com/img/Photos/Others/images/76.jpg">
+              </ion-thumbnail>
+              <ion-label>
+                <p>
+                  test
+                </p>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-thumbnail style="width: 50px;height: 50px;" slot="start">
+                <img src="https://mdbootstrap.com/img/Photos/Others/images/76.jpg">
+              </ion-thumbnail>
+              <ion-label>
+                <p>
+                  test
+                </p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ion-card>
+    <ion-card-header>Comments 5</ion-card-header>
+
+    <ion-row>
+      <ion-col size="1">
+        <ion-avatar style="margin-top: 35px;">
+          <img style="width: 25px;height: 25px;"
+            src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+        </ion-avatar>
+      </ion-col>
+      <ion-col>
+        <ion-item class="classter" style="margin-top: 25px;">
+          <ion-input type="text" [(ngModel)]="newComment" placeholder="Add a Comment"></ion-input>
+          <ion-icon class="font-size: 20px;" slot="end" name="attach-outline"></ion-icon>
+          <ion-icon class="font-size: 20px;" (click)="addNewComment()" style="margin-left: 5px;" name="send-outline">
+          </ion-icon>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-top: 10px;padding: 15px;" *ngFor="let comment of discussion.comments">
+      <ion-col size="1">
+        <ion-avatar style="margin-top: 35px;">
+          <img style="width: 25px;height: 25px;"
+            src="{{comment.profileImage ? comment.profileImage : 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y'}}">
+        </ion-avatar>
+      </ion-col>
+      <ion-col style="background: #f8f8f8">
+        <p>{{comment?.fullName}} &nbsp; {{comment?.datePosted | date : 'medium'}}</p>
+        <div class="classter">
+          <b>{{comment?.comment}}</b>
+          <div style="margin-top: 50px;">
+            <ion-icon style="font-size: 20px;" name="share-social-outline"></ion-icon>
+            <ion-badge (click)="presentAskExpertModal()"
+              style="padding: 5px;border: 2px solid;border-radius: 50px;margin-left: 40px;" color="light">Ask an Expert
+            </ion-badge>
+            <ion-icon (click)="bookMarkComment(comment)" style="margin-left: 40px;font-size: 20px;"
+              name="bookmark-outline"></ion-icon>
+            <ion-icon style="font-size: 20px;float: right;" name="bookmark-outline"></ion-icon>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+</ion-content>

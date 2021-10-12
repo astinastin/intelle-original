@@ -29,7 +29,7 @@ const routes: Routes = [
         data: { title: 'HOME > ACTIVITIES' }
       },
       {
-        path: 'prcoesses',
+        path: 'processes',
         loadChildren: () => import('../processes/processes.module').then(m => m.ProcessespageModule),
         data: { title: 'HOME > PROCESSES' }
       },

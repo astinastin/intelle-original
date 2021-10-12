@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivationStart, Router ,Event} from '@angular/router';
 
 @Component({
   selector: 'app-discussions',
@@ -8,7 +8,22 @@ import { Router } from '@angular/router';
 })
 export class DiscussionsPage implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router
+  ) { 
+    router.events.subscribe((event: Event) => {
+      this.checkRouterEvent(event);
+    });
+  }
+
+  routeUrl : any = '';
+  checkRouterEvent(routerEvent: Event): void {
+    if (routerEvent instanceof ActivationStart) {
+      if (routerEvent.snapshot.data.title) {
+        this.routeUrl = routerEvent.snapshot.data['title'];
+      }
+    }
+  }
 
 
   selectedTab: any = "friends"

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-myprocesses',
@@ -7,8 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyprocessesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit() {}
+
+  getProcessDetails()
+  {
+    console.log("hit");
+    
+    this.router.navigate(['/home/processes/process-details'])
+  }
 
 }
