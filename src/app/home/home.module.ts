@@ -6,7 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { RecommendationsComponent } from '../recommendations/recommendations.component';
-import { DiscussionpopoverComponent } from '../discussionpopover/discussionpopover.component';
+import { DiscussionpopoverComponent } from './components/popovers/discussionpopover/discussionpopover.component';
 
 
 @NgModule({

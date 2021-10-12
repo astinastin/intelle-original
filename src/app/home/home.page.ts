@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationError, ActivatedRoute, ActivationStart, ActivationEnd } from '@angular/router';
 import { PopoverController } from '@ionic/angular';
-import { DiscussionpopoverComponent } from '../discussionpopover/discussionpopover.component';
+import { DiscussionpopoverComponent } from './components/popovers/discussionpopover/discussionpopover.component';
 
 @Component({
   selector: 'app-home',
