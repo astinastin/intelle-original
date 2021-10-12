@@ -1,55 +1,72 @@
 <ion-content class="content-back">
-  <div >
-  <div class="scroll_container" >
-    <div class="scrollViewer">
-      <ion-grid style="height: 100%;">
-        <ion-row style="height: 100%;" nowrap>
-          <ion-col size="{{colSize.size1}}" style="background: white;">
+  <div>
+    <div class="scroll_container">
+      <div class="scrollViewer">
+        <ion-grid style="height: 100%;">
+          <ion-row style="height: 100%;" nowrap>
+            <ion-col size="{{colSize.size1}}" style="background: white;">
 
-            <ion-list>
-              <ion-item lines="none">
-                <ion-avatar slot="start">
-                  <img class="avatarStyle" src="https://www.biography.com/.image/t_share/MTc5ODc1NTM4NjMyOTc2Mzcz/gettyimages-693134468.jpg">
-                </ion-avatar>
-                <ion-icon class="f20" name="notifications-outline"></ion-icon>
-                <ion-icon slot="end" class="f20" name="notifications-outline"></ion-icon>
-              </ion-item>
-            </ion-list>
-            <ion-searchbar showCancelButton="never"></ion-searchbar>
-             <ion-item-divider></ion-item-divider>
-            <ion-list class="menu_list">
-              <ion-item lines="none" (click)="navigateToHome();selectedTab='home'" [ngClass]="{'ion-text-blue':selectedTab == 'home'}">
-                <ion-icon [ngClass]="{'ion-text-blue':selectedTab == 'home'}" name="home-outline"></ion-icon><span style="margin-left: 6px;">Home</span>
-              </ion-item>
-              <ion-item lines="none" (click)="navigateToStudy();selectedTab='study'" [ngClass]="{'ion-text-blue':selectedTab == 'study'}">
-                <ion-icon [ngClass]="{'ion-text-blue':selectedTab == 'study'}" name="book-outline"></ion-icon><span style="margin-left: 6px;">Learning</span>
-              </ion-item>
-              <ion-item lines="none" (click)="navigateToDiscussions();selectedTab='discussions'" [ngClass]="{'ion-text-blue':selectedTab == 'discussions'}">
-                <ion-icon [ngClass]="{'ion-text-blue':selectedTab == 'discussions'}" name="chatbubbles-outline"></ion-icon><span style="margin-left: 6px;">Discussions</span>
-              </ion-item>
-              <ion-item lines="none" (click)="navigateToActivities();selectedTab='activities'" [ngClass]="{'ion-text-blue':selectedTab == 'activities'}">
-                <ion-icon [ngClass]="{'ion-text-blue':selectedTab == 'activities'}" name="document-outline"></ion-icon><span style="margin-left: 6px;">Activities</span>
-              </ion-item>
-              <ion-item lines="none" (click)="selectedTab='process';navigateToProceses()" [ngClass]="{'ion-text-blue':selectedTab == 'process'}">
-                <ion-icon  [ngClass]="{'ion-text-blue':selectedTab == 'process'}" name="analytics-outline"></ion-icon><span style="margin-left: 6px;">Processes</span>
-              </ion-item>
-            </ion-list>
-   
-            <ion-button (click)="navigateToNewActivities()" *ngIf="selectedTab == 'activities'" expand="round" >CREATE ACTIVITY</ion-button>
-          </ion-col>
-          <ion-col size="{{colSize.size2}}" style="background-color: #f3f3f3;" style="height: 100%;" >
-            <div class="content-back" >
-              <ion-router-outlet></ion-router-outlet>
-            </div>
-          </ion-col>
-          <ion-col *ngIf="canShowRecommendation" style="background: white;" size="{{colSize.size3}}">
-            
-          <app-recommendations [type]="urlType" [header]="'Recommended Channel'" [elements]="recommendedChannel" (headerClicked)="goToChannel($event)"></app-recommendations>
-           
-          </ion-col>
-        </ion-row>
-       </ion-grid>
+              <ion-list>
+                <ion-item lines="none">
+                  <ion-avatar slot="start">
+                    <img class="avatarStyle"
+                      src="https://www.biography.com/.image/t_share/MTc5ODc1NTM4NjMyOTc2Mzcz/gettyimages-693134468.jpg">
+                  </ion-avatar>
+                  <ion-icon class="f20" name="notifications-outline"></ion-icon>
+                  <ion-icon slot="end" class="f20" name="notifications-outline"></ion-icon>
+                </ion-item>
+              </ion-list>
+              <ion-searchbar showCancelButton="never"></ion-searchbar>
+              <ion-item-divider></ion-item-divider>
+              <ion-list class="menu_list">
+                <ion-item lines="none" (click)="navigateToHome();selectedTab='home'"
+                  [ngClass]="{'ion-text-blue':selectedTab == 'home'}">
+                  <ion-icon [ngClass]="{'ion-text-blue':selectedTab == 'home'}" name="home-outline"></ion-icon><span
+                    style="margin-left: 6px;">Home</span>
+                </ion-item>
+                <ion-item lines="none" (click)="navigateToStudy();selectedTab='study'"
+                  [ngClass]="{'ion-text-blue':selectedTab == 'study'}">
+                  <ion-icon [ngClass]="{'ion-text-blue':selectedTab == 'study'}" name="book-outline"></ion-icon><span
+                    style="margin-left: 6px;">Learning</span>
+                </ion-item>
+                <ion-item lines="none" (click)="navigateToDiscussions();selectedTab='discussions'"
+                  [ngClass]="{'ion-text-blue':selectedTab == 'discussions'}">
+                  <ion-icon [ngClass]="{'ion-text-blue':selectedTab == 'discussions'}" name="chatbubbles-outline">
+                  </ion-icon><span style="margin-left: 6px;">Discussions</span>
+                </ion-item>
+                <ion-item lines="none" (click)="navigateToActivities();selectedTab='activities'"
+                  [ngClass]="{'ion-text-blue':selectedTab == 'activities'}">
+                  <ion-icon [ngClass]="{'ion-text-blue':selectedTab == 'activities'}" name="document-outline">
+                  </ion-icon><span style="margin-left: 6px;">Activities</span>
+                </ion-item>
+                <ion-item lines="none" (click)="selectedTab='process';navigateToProceses()"
+                  [ngClass]="{'ion-text-blue':selectedTab == 'process'}">
+                  <ion-icon [ngClass]="{'ion-text-blue':selectedTab == 'process'}" name="analytics-outline"></ion-icon>
+                  <span style="margin-left: 6px;">Processes</span>
+                </ion-item>
+              </ion-list>
+
+              <ion-button (click)="navigateToNewActivities()" *ngIf="selectedTab == 'activities'" expand="round">CREATE
+                ACTIVITY</ion-button>
+
+                <ion-button (click)="openCreateDiscussionsPopover()" *ngIf="selectedTab == 'discussions'" expand="round">Create
+                 Discussions</ion-button>
+
+            </ion-col>
+            <ion-col size="{{colSize.size2}}" style="background-color: #f3f3f3;" style="height: 100%;">
+              <div class="content-back">
+                <ion-router-outlet></ion-router-outlet>
+              </div>
+            </ion-col>
+            <ion-col *ngIf="canShowRecommendation" style="background: white;" size="{{colSize.size3}}">
+
+              <app-recommendations [type]="urlType" [header]="'Recommended Channel'" [elements]="recommendedChannel"
+                (headerClicked)="goToChannel($event)"></app-recommendations>
+
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
     </div>
   </div>
-</div>
 </ion-content>

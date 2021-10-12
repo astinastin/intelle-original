@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { RecommendationsComponent } from '../recommendations/recommendations.component';
+import { DiscussionpopoverComponent } from '../discussionpopover/discussionpopover.component';
 
 
 @NgModule({
@@ -15,6 +16,6 @@ import { RecommendationsComponent } from '../recommendations/recommendations.com
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage,RecommendationsComponent]
+  declarations: [HomePage,RecommendationsComponent,DiscussionpopoverComponent]
 })
 export class HomePageModule {}
