@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { AskComponent } from '../ask/ask.component';
 
 @Component({
   selector: 'activity-details',
@@ -7,8 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActivityDetailsComponent implements OnInit {
 
-  constructor() { }
+  discussion: any = {
+    comments: [
+      { fullName: "india Cale", datePosted: new Date(), comment: 'At vero et accumsas et lusto odio dignissimos ducimus qui blanditiss prease ntium voluntium delenti atque corrupti quos dolores et quas excepturi sint ' },
+      { fullName: "india Cale", datePosted: new Date(), comment: 'At vero et accumsas et lusto odio dignissimos ducimus qui blanditiss prease ntium voluntium delenti atque corrupti quos dolores et quas excepturi sint ' },
+      { fullName: "india Cale", datePosted: new Date(), comment: 'At vero et accumsas et lusto odio dignissimos ducimus qui blanditiss prease ntium voluntium delenti atque corrupti quos dolores et quas excepturi sint ' },
+      { fullName: "india Cale", datePosted: new Date(), comment: 'At vero et accumsas et lusto odio dignissimos ducimus qui blanditiss prease ntium voluntium delenti atque corrupti quos dolores et quas excepturi sint ' },
+      { fullName: "india Cale", datePosted: new Date(), comment: 'At vero et accumsas et lusto odio dignissimos ducimus qui blanditiss prease ntium voluntium delenti atque corrupti quos dolores et quas excepturi sint ' },
+      { fullName: "india Cale", datePosted: new Date(), comment: 'At vero et accumsas et lusto odio dignissimos ducimus qui blanditiss prease ntium voluntium delenti atque corrupti quos dolores et quas excepturi sint ' }
+    ]
+  }
 
-  ngOnInit() {}
+  constructor(private modalController: ModalController) { }
+
+  ngOnInit() { }
+
+  async presentAskExpertModal() {
+    const modal = await this.modalController.create({
+      component: AskComponent,
+      cssClass: 'modal-wrapper'
+    });
+    return await modal.present();
+  }
 
 }

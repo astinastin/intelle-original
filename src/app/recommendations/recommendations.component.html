@@ -1,0 +1,180 @@
+<div *ngIf="showRec && !isActivityDetailSection">
+  <p class="ml10">{{header}}</p>
+  <ion-card-header *ngIf="selectedTab !='process'">
+    <ion-img [src]="'https://mdbootstrap.com/img/Photos/Others/images/76.jpg'" class="width100"></ion-img>
+  </ion-card-header>
+  <ion-card-content>
+    <h4><b>Understanding Alternatives</b></h4>
+    <br>
+    <p><b>Live-edge Raw denim activated charcoal big pintrest street art hexagon selfies racletter</b></p>
+    <br>
+    <p>8 Episodes</p>
+    <br>
+    <ion-icon *ngIf="selectedTab =='process'" style="color: red;" name="person-outline"></ion-icon><span
+      style="margin-left: 3px;">Complete with ARI</span>
+    <ion-badge *ngIf="selectedTab !='process'" color="warning">
+      <ion-icon name="git-network-outline"></ion-icon>20
+    </ion-badge>
+  </ion-card-content>
+
+  <p class="ml10">Recommended Channels</p>
+  <ion-card-header *ngIf="selectedTab !='process'">
+    <ion-img [src]="'https://mdbootstrap.com/img/Photos/Others/images/76.jpg'" class="width100"></ion-img>
+  </ion-card-header>
+  <ion-card-content>
+    <h4><b>Understanding Alternatives</b></h4>
+    <br>
+    <p><b>Live-edge Raw denim activated charcoal big pintrest street art hexagon selfies racletter</b></p>
+    <br>
+    <p>8 Episodes</p>
+    <br>
+    <ion-icon *ngIf="selectedTab =='process'" style="color: red;" name="person-outline"></ion-icon><span
+      style="margin-left: 3px;">Complete with ARI</span>
+    <ion-badge *ngIf="selectedTab !='process'" color="warning">
+      <ion-icon name="git-network-outline"></ion-icon>20
+    </ion-badge>
+  </ion-card-content>
+
+  <p class="ml10">Recommended Channels</p>
+  <ion-card-header *ngIf="selectedTab !='process'">
+    <ion-img [src]="'https://mdbootstrap.com/img/Photos/Others/images/76.jpg'" class="width100"></ion-img>
+  </ion-card-header>
+  <ion-card-content>
+    <h4><b>Understanding Alternatives</b></h4>
+    <br>
+    <p><b>Live-edge Raw denim activated charcoal big pintrest street art hexagon selfies racletter</b></p>
+    <br>
+    <p>8 Episodes</p>
+    <br>
+    <ion-icon *ngIf="selectedTab =='process'" style="color: red;" name="person-outline"></ion-icon><span
+      style="margin-left: 3px;">Complete with ARI</span>
+    <ion-badge *ngIf="selectedTab !='process'" color="warning">
+      <ion-icon name="git-network-outline"></ion-icon>20
+    </ion-badge>
+  </ion-card-content>
+</div>
+
+
+<div *ngIf="showRec && isActivityDetailSection">
+  <p class="ml10">{{header}}</p>
+ <div >
+  <ion-card-content style="box-shadow: 0px 0px 1px 0px;">
+    <ion-img [src]="'https://mdbootstrap.com/img/Photos/Others/images/76.jpg'"></ion-img>
+    <h4><b>Ethics and Good decision</b></h4>
+    <div>Episode 2/2 in Ethics</div>
+    <br>
+    <div>Live-edge Raw denim activated charcoal big pintrest street art hexagon selfies racletter</div>
+    <ion-chip class="action_chips" color="warning">
+      <ion-label>0/3</ion-label>
+      <ion-icon color="warning" name="trophy-outline"></ion-icon>
+    </ion-chip>
+    <ion-chip color="medium" class="action_chips">
+      <ion-label>30m</ion-label>
+      <ion-icon name="time-outline"></ion-icon>
+    </ion-chip>
+  </ion-card-content>
+ </div>
+ <div>
+  <p style="margin-top: 20px;" class="ml15">Participants (25)</p>
+  <ion-list>
+    <ion-item>
+      <span>
+        <img style="width: 25px;height: 25px;border-radius:25px" src="https://mdbootstrap.com/img/Photos/Others/images/76.jpg">
+      </span>
+      <span style="margin-left: 5px;"> Fanchis Panaramo</span>
+    </ion-item>
+    <ion-item>
+      <span>
+        <img style="width: 25px;height: 25px;border-radius:25px" src="https://mdbootstrap.com/img/Photos/Others/images/76.jpg">
+      </span>
+      <span style="margin-left: 5px;"> Jenny Doe</span>
+    </ion-item>
+    <ion-item>
+      <span>
+        <img style="width: 25px;height: 25px;border-radius:25px" src="https://mdbootstrap.com/img/Photos/Others/images/76.jpg">
+      </span>
+      <span style="margin-left: 5px;">Timka Morris</span>
+    </ion-item>
+    <ion-item>
+      <span>
+        <img style="width: 25px;height: 25px;border-radius:25px" src="https://mdbootstrap.com/img/Photos/Others/images/76.jpg">
+      </span>
+      <span style="margin-left: 5px;">Wen Ronchin</span>
+    </ion-item>
+    <ion-item>
+      <span>
+        <img style="width: 25px;height: 25px;border-radius:25px" src="https://mdbootstrap.com/img/Photos/Others/images/76.jpg">
+      </span>
+      <span style="margin-left: 5px;">Soccoro Quinton</span>
+    </ion-item>
+  </ion-list>
+ </div>
+ 
+ <div>
+  <p style="margin-top: 20px;">More in todo</p>
+  <ion-card style="border: 1px solid red;" (click)="getActivityDetails()">
+    <ion-card-header>
+      <ion-card-title><b>Gearing and Margin</b></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Communication Leadership</p>
+      <br>
+      <b>Greyhound Diversly hello coldly wonderfully marginally far</b>
+      <br>
+      <div style="margin-top: 10px;">
+        Due Sunday 31 march 2019 at 4:30pm
+      </div>
+      <ion-badge style="margin-top: 10px;" color="warning">
+        <ion-icon name="git-network-outline"></ion-icon>1
+      </ion-badge>
+      <ion-badge color="light" style="margin-left: 5px;">
+        <ion-icon name="time-outline"></ion-icon>30m
+      </ion-badge>
+      <ion-row>
+        <ion-col>
+          <ion-icon name="person-outline"></ion-icon><span style="margin-left: 3px;">2</span>
+        </ion-col>
+        <ion-col><ion-icon name="chatbox-outline"></ion-icon><span style="margin-left: 3px;">12</span></ion-col>
+        <ion-col><ion-icon  name="share-social-outline"></ion-icon></ion-col>
+        <ion-col><ion-icon name="bookmark-outline"></ion-icon></ion-col>
+      </ion-row>
+    </ion-card-content>
+
+  </ion-card>
+
+
+  <ion-card>
+    <ion-card-header >
+      <ion-card-title style="color: white;">Suspendice alur sul
+        <span>
+          <ion-icon style="color: white;float:right;" name="ellipsis-vertical-outline"></ion-icon>
+        </span>
+      </ion-card-title>
+      <ion-img [src]="'https://mdbootstrap.com/img/Photos/Others/images/76.jpg'" class="width100"></ion-img>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Communication Leadership</p>
+      <br>
+      <b>Greyhound Diversly hello coldly wonderfully marginally far</b>
+      <br>
+      <div style="margin-top: 10px;">
+        Due Sunday 31 march 2019 at 4:30pm
+      </div>
+      <ion-badge style="margin-top: 10px;" color="warning">
+        <ion-icon name="git-network-outline"></ion-icon>1
+      </ion-badge>
+      <ion-badge color="light" style="margin-left: 5px;">
+        <ion-icon name="time-outline"></ion-icon>30m
+      </ion-badge>
+      <ion-row>
+        <ion-col>
+          <ion-icon name="person-outline"></ion-icon><span style="margin-left: 3px;">2</span>
+        </ion-col>
+        <ion-col><ion-icon name="chatbox-outline"></ion-icon><span style="margin-left: 3px;">12</span></ion-col>
+        <ion-col><ion-icon  name="share-social-outline"></ion-icon></ion-col>
+        <ion-col><ion-icon name="bookmark-outline"></ion-icon></ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+ </div>
+</div>

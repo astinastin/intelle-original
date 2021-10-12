@@ -6,11 +6,11 @@
   </ion-toolbar>
 </ion-header> -->
 
-<ion-content class="content-back" overflow-scroll="true" class="no-scroll">
-  <div class="scroll_container">
+<ion-content class="content-back">
+  <div class="scroll_container" >
     <div class="scrollViewer">
       <ion-grid >
-        <ion-row style="height: 900px;">
+        <ion-row style="height: 900px;" nowrap>
           <ion-col size="1"></ion-col>
           <ion-col size="{{colSize.size1}}" style="background: white;">
 
@@ -50,74 +50,13 @@
               <ion-router-outlet></ion-router-outlet>
             </div>
           </ion-col>
-          <ion-col *ngIf="selectedTab!='activities'" style="background: white;" size="{{colSize.size3}}">
+          <ion-col *ngIf="canShowRecommendation" style="background: white;" size="{{colSize.size3}}">
             
-           <ion-card>
-            <p class="ml10">Recommended Channels</p>
-            <ion-card-header  *ngIf="selectedTab !='process'">
-              <ion-img [src]="'https://mdbootstrap.com/img/Photos/Others/images/76.jpg'"
-                class="width100"></ion-img>
-            </ion-card-header>
-             <ion-card-content>
-               <h4><b>Understanding Alternatives</b></h4>
-               <br>
-               <p><b>Live-edge Raw denim activated charcoal big pintrest street art hexagon selfies racletter</b></p>
-               <br>
-               <p>8 Episodes</p>
-               <br>
-               <ion-icon *ngIf="selectedTab =='process'" style="color: red;" name="person-outline"></ion-icon><span style="margin-left: 3px;">Complete with ARI</span>
-               <ion-badge  *ngIf="selectedTab !='process'" color="warning">
-                <ion-icon name="git-network-outline"></ion-icon>20
-              </ion-badge>
-             </ion-card-content>
-      
-             <p class="ml10">Recommended Channels</p>
-             <ion-card-header  *ngIf="selectedTab !='process'">
-               <ion-img [src]="'https://mdbootstrap.com/img/Photos/Others/images/76.jpg'"
-                class="width100"></ion-img>
-             </ion-card-header>
-              <ion-card-content>
-                <h4><b>Understanding Alternatives</b></h4>
-                <br>
-                <p><b>Live-edge Raw denim activated charcoal big pintrest street art hexagon selfies racletter</b></p>
-                <br>
-                <p>8 Episodes</p>
-                <br>
-                <ion-icon *ngIf="selectedTab =='process'" style="color: red;" name="person-outline"></ion-icon><span style="margin-left: 3px;">Complete with ARI</span>
-                <ion-badge  *ngIf="selectedTab !='process'" color="warning">
-                 <ion-icon name="git-network-outline"></ion-icon>20
-               </ion-badge>
-              </ion-card-content>
-      
-              <p class="ml10">Recommended Channels</p>
-              <ion-card-header  *ngIf="selectedTab !='process'">
-                <ion-img [src]="'https://mdbootstrap.com/img/Photos/Others/images/76.jpg'"
-                 class="width100"></ion-img>
-              </ion-card-header>
-               <ion-card-content>
-                 <h4><b>Understanding Alternatives</b></h4>
-                 <br>
-                 <p><b>Live-edge Raw denim activated charcoal big pintrest street art hexagon selfies racletter</b></p>
-                 <br>
-                 <p>8 Episodes</p>
-                 <br>
-                 <ion-icon *ngIf="selectedTab =='process'" style="color: red;" name="person-outline"></ion-icon><span style="margin-left: 3px;">Complete with ARI</span>
-                 <ion-badge  *ngIf="selectedTab !='process'" color="warning">
-                  <ion-icon name="git-network-outline"></ion-icon>20
-                </ion-badge>
-               </ion-card-content>
-           </ion-card>
+          <app-recommendations [type]="urlType" [header]="'Recommended Channel'" [elements]="recommendedChannel" (headerClicked)="goToChannel($event)"></app-recommendations>
            
           </ion-col>
         </ion-row>
        </ion-grid>
     </div>
   </div>
-<!--  <div class="preview">
-  <div style="padding: 10px;">
-    <ion-input placeholder="Make a Comment"></ion-input>
-  </div>
-  <ion-badge style="float: right;" color="light">Cancel</ion-badge>
-  <ion-badge style="float: right;margin-right: 25px;" color="light">Submit</ion-badge>
- </div> -->
 </ion-content>

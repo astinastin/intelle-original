@@ -7,6 +7,9 @@ import { IonicModule } from '@ionic/angular';
 import { ActivitiesPageRoutingModule } from './activities-routing.module';
 
 import { ActivitiesPage } from './activities.page';
+import { AskComponent } from './components/ask/ask.component';
+import { ActivityDetailsComponent } from './components/activityDetails/activity-details.component';
+import { NewactivityComponent } from './components/newactivity/newactivity.component';
 
 @NgModule({
   imports: [
@@ -15,6 +18,6 @@ import { ActivitiesPage } from './activities.page';
     IonicModule,
     ActivitiesPageRoutingModule
   ],
-  declarations: [ActivitiesPage]
+  declarations: [ActivitiesPage,AskComponent,ActivityDetailsComponent,NewactivityComponent]
 })
 export class ActivitiesPageModule {}

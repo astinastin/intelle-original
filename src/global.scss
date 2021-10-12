@@ -35,29 +35,6 @@
       color: blue;
   }
 
-/*   app-newactivity{
-      width: 700px;
-  } */
-
-/*   app-learning {
-      width: 500px;
-      text-align: center;
-  } */
-
-  /* app-discussions {
-    width: 500px;
-} */
-
-
-// .scroll_container
-// {
-//   display: block;
-//     position: absolute;
-//     overflow: hidden;
-//     inset: 46px -60px 53px 20px;
-// }
-
-
 * {
     font-size: 2.0rem;
   }
@@ -106,7 +83,7 @@
   {
     padding-left: 15px !important;
     padding-right: 15px !important;
-    
+    padding-bottom: 15px !important;
   }
 
   app-newactivity
@@ -114,3 +91,10 @@
     padding-left: 100px !important;
     padding-right: 100px !important;
   }
+
+  .modal-wrapper {
+    --width: 60%;
+    --height: 40%;
+  }
+
+  

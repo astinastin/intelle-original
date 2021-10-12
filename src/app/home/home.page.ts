@@ -22,6 +22,30 @@ export class HomePage {
     });
   }
 
+  urlType : any = {}
+  ngOnInit()
+  {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        if(event.url.includes('activities') && event.url.includes('activity-details')){
+        this.urlType = {...{},...{route :event.url}}
+        this.setColSize(2,6,2)
+        this.canShowRecommendation = true;
+        }
+        else if(event.url.includes('activities') && !event.url.includes('activity-details')){
+        this.urlType = {...{},...{route :event.url}}
+        this.setColSize(2,9,1)
+        this.canShowRecommendation = false;
+        }
+        else if(!event.url.includes('activities')){
+        this.urlType = {...{},...{route :event.url}}
+        this.setColSize(2,6,2)
+        this.canShowRecommendation = true;
+        }
+      }
+  });
+  }
+
   checkRouterEvent(routerEvent: Event): void {
     if (routerEvent instanceof ActivationStart) {
       if (routerEvent.snapshot.data.title) {
@@ -30,50 +54,43 @@ export class HomePage {
     }
   }
 
-  navigateToStudy() {
-    console.log("hit");
-    
+  setColSize(size1,size2,size3)
+  {
     this.colSize = {
-      size1: '2',
-      size2: '6',
-      size3: '2'
+      size1: size1,
+      size2: size2,
+      size3: size3
     }
+  }
+
+  canShowRecommendation
+  navigateToStudy() {
+    this.setColSize(2,7,3)
     this.router.navigate(['/home/learning/my-learnings'])
   }
 
   navigateToHome(){
-    this.colSize.size1 = '3';
-    this.colSize.size2 = '5';
-    this.colSize.size3 = '3';
+    this.setColSize(2,7,3)
     this.router.navigate(['/home/intelligo-home'])
   }
 
   navigateToDiscussions() {
-    this.colSize.size1 = '2';
-    this.colSize.size2 = '5';
-    this.colSize.size3 = '2';
+    this.setColSize(2,7,3)
     this.router.navigate(['/home/discussions/my-discussions'])
   }
 
   navigateToActivities() {
-    this.colSize.size1 = '2';
-    this.colSize.size2 = '8';
-    this.colSize.size3 = '2';
+    this.setColSize(2,8,2)
     this.router.navigate(['/home/activities'])
   }
 
   navigateToNewActivities() {
-    this.colSize.size1 = '2';
-    this.colSize.size2 = '8';
-    this.colSize.size3 = '2';
+    this.setColSize(2,8,2)
     this.router.navigate(['/home/activities/new-activity'])
   }
 
   navigateToProceses() {
-    this.colSize.size1 = '3';
-    this.colSize.size2 = '5';
-    this.colSize.size3 = '3';
-    
+    this.setColSize(2,7,3)
     this.router.navigate(['/home/prcoesses/my-processes'])
   }
 }

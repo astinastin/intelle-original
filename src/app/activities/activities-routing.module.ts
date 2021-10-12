@@ -8,7 +8,7 @@ const routes: Routes = [
   {
     path: '',
     component: ActivitiesPage,
-    data: { title: 'ACTIVITIES' }
+    data: { title: 'ACTIVITIES',path:'activities' }
   },
   {
     path: 'new-activity',
@@ -18,7 +18,7 @@ const routes: Routes = [
   {
     path: 'activity-details',
     component: ActivityDetailsComponent,
-    data: { title: 'ACTIVITY DETAILS' }
+    data: { title: 'ACTIVITY DETAILS' ,path:'activity-details',size:{size1:'2',size2:'8',size3:'2'} }
   }
 ];
 
