@@ -1,7 +1,7 @@
 <ion-content>
   <div *ngIf="showRec && !isActivityDetailSection"  class="hideScroll">
     <p class="ml10">{{header}}</p>
-    <ion-card-header *ngIf="selectedTab !='process'">
+    <ion-card-header>
       <ion-img [src]="'https://mdbootstrap.com/img/Photos/Others/images/76.jpg'" class="width100"></ion-img>
     </ion-card-header>
     <ion-card-content>
@@ -11,15 +11,15 @@
       <br>
       <p>8 Episodes</p>
       <br>
-      <ion-icon *ngIf="selectedTab =='process'" style="color: red;" name="person-outline"></ion-icon><span
+      <ion-icon  style="color: red;" name="person-outline"></ion-icon><span
         style="margin-left: 3px;">Complete with ARI</span>
-      <ion-badge *ngIf="selectedTab !='process'" color="warning">
+      <ion-badge color="warning">
         <ion-icon name="git-network-outline"></ion-icon>20
       </ion-badge>
     </ion-card-content>
   
     <p class="ml10">Recommended Channels</p>
-    <ion-card-header *ngIf="selectedTab !='process'">
+    <ion-card-header>
       <ion-img [src]="'https://mdbootstrap.com/img/Photos/Others/images/76.jpg'" class="width100"></ion-img>
     </ion-card-header>
     <ion-card-content>
@@ -29,15 +29,15 @@
       <br>
       <p>8 Episodes</p>
       <br>
-      <ion-icon *ngIf="selectedTab =='process'" style="color: red;" name="person-outline"></ion-icon><span
+      <ion-icon  style="color: red;" name="person-outline"></ion-icon><span
         style="margin-left: 3px;">Complete with ARI</span>
-      <ion-badge *ngIf="selectedTab !='process'" color="warning">
+      <ion-badge color="warning">
         <ion-icon name="git-network-outline"></ion-icon>20
       </ion-badge>
     </ion-card-content>
   
     <p class="ml10">Recommended Channels</p>
-    <ion-card-header *ngIf="selectedTab !='process'">
+    <ion-card-header>
       <ion-img [src]="'https://mdbootstrap.com/img/Photos/Others/images/76.jpg'" class="width100"></ion-img>
     </ion-card-header>
     <ion-card-content>
@@ -47,9 +47,9 @@
       <br>
       <p>8 Episodes</p>
       <br>
-      <ion-icon *ngIf="selectedTab =='process'" style="color: red;" name="person-outline"></ion-icon><span
+      <ion-icon  style="color: red;" name="person-outline"></ion-icon><span
         style="margin-left: 3px;">Complete with ARI</span>
-      <ion-badge *ngIf="selectedTab !='process'" color="warning">
+      <ion-badge color="warning">
         <ion-icon name="git-network-outline"></ion-icon>20
       </ion-badge>
     </ion-card-content>
@@ -113,7 +113,7 @@
    
    <div>
     <p style="margin-top: 20px;">More in todo</p>
-    <ion-card style="border: 1px solid red;" (click)="getActivityDetails()">
+    <ion-card style="border: 1px solid red;" >
       <ion-card-header>
         <ion-card-title><b>Gearing and Margin</b></ion-card-title>
       </ion-card-header>

@@ -24,6 +24,7 @@ export class ActivityDetailsComponent implements OnInit {
 
   ngOnInit() { }
 
+  newComment : string = '';
   async presentAskExpertModal() {
     const modal = await this.modalController.create({
       component: AskComponent,

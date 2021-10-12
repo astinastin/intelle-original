@@ -8,6 +8,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { RecommendationsComponent } from '../recommendations/recommendations.component';
 import { DiscussionpopoverComponent } from './components/popovers/discussionpopover/discussionpopover.component';
 import { SearchSuggestionsPopover } from './components/popovers/search-suggestions-popover/search-suggestions-popover.component';
+import { ItelligeHomeComponent } from '../itellige-home/itellige-home.component';
 
 
 @NgModule({
@@ -17,6 +18,6 @@ import { SearchSuggestionsPopover } from './components/popovers/search-suggestio
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage,RecommendationsComponent,DiscussionpopoverComponent,SearchSuggestionsPopover]
+  declarations: [HomePage,RecommendationsComponent,DiscussionpopoverComponent,SearchSuggestionsPopover,ItelligeHomeComponent]
 })
 export class HomePageModule {}

@@ -9,6 +9,7 @@ import { ModalController } from '@ionic/angular';
 
 export class ProcessDetailsComponent implements OnInit {
 
+  newComment : string = '';
   discussion: any = {
     comments: [
       { fullName: "india Cale", datePosted: new Date(), comment: 'At vero et accumsas et lusto odio dignissimos ducimus qui blanditiss prease ntium voluntium delenti atque corrupti quos dolores et quas excepturi sint ' },
@@ -24,5 +25,6 @@ export class ProcessDetailsComponent implements OnInit {
 
   ngOnInit() { }
 
+  presentAskExpertModal(){}
 
 }

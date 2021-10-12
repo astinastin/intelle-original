@@ -17,6 +17,7 @@ export class RecommendationsComponent implements OnInit {
 
   showRec: boolean = false;
   isActivityDetailSection : boolean = false;
+  selectedTab : string = '';
   ngOnChanges() {
     if (this.type) {
       this.isActivityDetailSection = false;

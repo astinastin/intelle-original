@@ -10,6 +10,7 @@ import { DiscussionsPage } from './discussions.page';
 import { SavedComponent } from './saved/saved.component';
 import { AllDiscussionsComponent } from './alldiscussions/alldiscussions.component';
 import { DiscussionDetailsComponent } from './components/discussion-details/discussion-details.component';
+import { AskComponent } from './components/ask/ask.component';
 
 @NgModule({
   imports: [
@@ -18,6 +19,6 @@ import { DiscussionDetailsComponent } from './components/discussion-details/disc
     IonicModule,
     DiscussionsPageRoutingModule
   ],
-  declarations: [DiscussionsPage,AllDiscussionsComponent,SavedComponent,DiscussionDetailsComponent]
+  declarations: [DiscussionsPage,AllDiscussionsComponent,SavedComponent,DiscussionDetailsComponent,AskComponent]
 })
 export class DiscussionsPageModule {}

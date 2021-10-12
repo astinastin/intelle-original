@@ -28,7 +28,9 @@ export class HomePage {
     });
   }
 
-  urlType: any = {}
+  urlType: any = {};
+  selectedTab : string = '';
+  recommendedChannel : any = [];
   ngOnInit() {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
@@ -115,5 +117,10 @@ export class HomePage {
       cssClass : 'search-placeholder-class'
     });
     return await popover.present();
+  }
+
+  goToChannel(ev)
+  {
+
   }
 }
