@@ -1,8 +1,9 @@
 <ion-content class="content-back">
+  <div >
   <div class="scroll_container" >
     <div class="scrollViewer">
-      <ion-grid >
-        <ion-row style="height: 900px;" nowrap>
+      <ion-grid style="height: 100%;">
+        <ion-row style="height: 100%;" nowrap>
           <ion-col size="{{colSize.size1}}" style="background: white;">
 
             <ion-list>
@@ -36,8 +37,8 @@
    
             <ion-button (click)="navigateToNewActivities()" *ngIf="selectedTab == 'activities'" expand="round" >CREATE ACTIVITY</ion-button>
           </ion-col>
-          <ion-col size="{{colSize.size2}}" style="background-color: #f3f3f3;" >
-            <div class="content-back" style="height: 100%;">
+          <ion-col size="{{colSize.size2}}" style="background-color: #f3f3f3;" style="height: 100%;" >
+            <div class="content-back" >
               <ion-router-outlet></ion-router-outlet>
             </div>
           </ion-col>
@@ -50,4 +51,5 @@
        </ion-grid>
     </div>
   </div>
+</div>
 </ion-content>
