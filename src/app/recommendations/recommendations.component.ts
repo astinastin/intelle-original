@@ -26,7 +26,6 @@ export class RecommendationsComponent implements OnInit {
   switchObj: any = {}
   ngOnChanges() {
     if (this.type) {
-      this.isActivityDetailSection = false;
       if (this.type.route.includes('activities') && this.type.route.includes('activity-details')) {
         this.isActivityDetailSection = true;
         this.searching = false;
