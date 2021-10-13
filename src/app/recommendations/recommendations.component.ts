@@ -52,9 +52,10 @@ export class RecommendationsComponent implements OnInit {
       this.isActivityDetailSection = false;
       this.searchingNow = false
       this.switchObj = this.searchObj
+      this.searchObj.action == 'assesments'
       setTimeout(()=>{
         this.stepper.selectedIndex = 1; 
-      },0);
+      },1000);
     }
 
   }

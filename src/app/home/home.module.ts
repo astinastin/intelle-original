@@ -17,8 +17,10 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatCardModule} from '@angular/material/card';
+import { ContactsComponent } from '../contacts/contacts.component';
 
 @NgModule({
+  
   imports: [
     CommonModule,
     FormsModule,
@@ -33,6 +35,15 @@ import {MatCardModule} from '@angular/material/card';
     MatRadioModule,
     MatCardModule
   ],
-  declarations: [HomePage,RecommendationsComponent,DiscussionpopoverComponent,SearchSuggestionsPopover,ItelligeHomeComponent]
+
+  declarations: [
+    HomePage,
+    RecommendationsComponent,
+    DiscussionpopoverComponent,
+    SearchSuggestionsPopover,
+    ItelligeHomeComponent,
+    ContactsComponent
+  ]
 })
+
 export class HomePageModule {}

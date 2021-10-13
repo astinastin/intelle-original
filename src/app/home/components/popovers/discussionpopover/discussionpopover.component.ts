@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { SharedserviceService } from 'src/app/sharedservice.service';
 
 @Component({
   selector: 'app-discussionpopover',
@@ -7,8 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiscussionpopoverComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private route : Router,
+    private service : SharedserviceService
+    ) { }
 
   ngOnInit() {}
+
+  routeToContact()
+  {
+    this.service.searchObj.next({action:'contacts'})
+    this.route.navigate(['/home/contacts'])
+  }
 
 }

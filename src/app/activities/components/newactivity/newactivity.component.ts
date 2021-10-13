@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './newactivity.component.html',
   styleUrls: ['./newactivity.component.scss'],
 })
+
 export class NewactivityComponent implements OnInit {
 
   constructor() { }

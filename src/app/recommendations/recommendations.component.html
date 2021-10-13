@@ -238,4 +238,42 @@
        Complete All Steps to Claim Reward
      </div>
   </div>
+
+<!--   CONTACTS SECTION -->
+<div *ngIf="switchObj.action == 'contacts'">
+  <p class="ml10">Actions</p>
+
+  <ion-list lines="none">
+    <ion-item >
+      <span>
+        <div class="circle-icon">
+          <ion-icon style="font-size: 20px;margin-bottom: 5px" name="person-add-outline">
+          </ion-icon>
+        </div>
+      </span>
+      <span style="margin-left: 5px;"> Add To</span>
+    </ion-item>
+    <br>
+    <ion-item >
+      <span>
+        <div class="circle-icon">
+          <ion-icon style="font-size: 20px;margin-bottom: 5px" name="person-outline">
+          </ion-icon>
+        </div>
+      </span>
+      <span style="margin-left: 5px;"> Save</span>
+    </ion-item>
+    <br>
+    <ion-item >
+      <span>
+        <div class="circle-icon">
+          <ion-icon style="font-size: 20px;margin-bottom: 5px" name="people-outline">
+          </ion-icon>
+        </div>
+      </span>
+      <span style="margin-left: 5px;"> Group</span>
+    </ion-item>
+  </ion-list>
+</div>
+
 </ion-content>

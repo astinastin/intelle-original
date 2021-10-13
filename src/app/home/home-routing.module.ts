@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ContactsComponent } from '../contacts/contacts.component';
 import { ItelligeHomeComponent } from '../itellige-home/itellige-home.component';
 import { HomePage } from './home.page';
 
@@ -11,6 +12,10 @@ const routes: Routes = [
       {
         path: 'intelligo-home',
         component:ItelligeHomeComponent
+      },
+      {
+        path: 'contacts',
+        component:ContactsComponent
       },
       {
         path: 'learning',
