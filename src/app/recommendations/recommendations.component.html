@@ -1,5 +1,5 @@
 <ion-content>
-  <div *ngIf="showRec && !isActivityDetailSection && !searchingNow"  class="hideScroll">
+  <div *ngIf="!isActivityDetailSection && !searchingNow && !switchObj.action"  class="hideScroll">
     <p class="ml10">{{header}}</p>
     <ion-card-header>
       <ion-img [src]="'https://mdbootstrap.com/img/Photos/Others/images/76.jpg'" class="width100"></ion-img>
@@ -56,7 +56,7 @@
   </div>
   
   
-  <div *ngIf="showRec && isActivityDetailSection &&  !searchingNow"  class="hideScroll">
+  <div *ngIf="isActivityDetailSection"  class="hideScroll">
     <p class="ml10">{{header}}</p>
    <div >
     <ion-card-content style="box-shadow: 0px 0px 1px 0px;">
@@ -212,5 +212,9 @@
       <ion-label style="color: black;">Ideas</ion-label>
     </ion-chip>
 
+  </div>
+
+  <div *ngIf="switchObj.action == 'assesments'">
+     Test
   </div>
 </ion-content>

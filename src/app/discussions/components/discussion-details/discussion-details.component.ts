@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { SharedserviceService } from 'src/app/sharedservice.service';
 import { ModalController } from '@ionic/angular';
 import { AskComponent } from '../ask/ask.component';
-
 @Component({
   selector: 'discussion-details',
   templateUrl: './discussion-details.component.html',
   styleUrls: ['./discussion-details.component.scss'],
 })
-export class DiscussionDetailsComponent implements OnInit {
 
+export class DiscussionDetailsComponent implements OnInit {
 
   tokenValue: string = '';
   paramId: any = '';
@@ -45,66 +44,67 @@ export class DiscussionDetailsComponent implements OnInit {
 
 
   ngOnInit() {
- /*    this.loggedInUser = this.service.user;
-    this.newComment = ''; */
+    /*    this.loggedInUser = this.service.user;
+       this.newComment = ''; */
   }
 
   ionViewDidEnter() {
 
-   /*  this.newComment = '';
-    this.tokenValue = this.service.token */
+    /*  this.newComment = '';
+     this.tokenValue = this.service.token */
   }
+
   getDiscussionDetails() {
-/*     this.loggedInUser = this.service.user;
-    this.tokenValue = this.service.token
-    let headers = new HttpHeaders();
-    headers = headers.set('Authorization', 'Bearer ' + this.tokenValue);
-    this.httpservice.request('GET', 'https://lig-intellego-api-dv.azurewebsites.net/api/discussions/' + this.paramId, { headers })
-      .subscribe(
-        (res: any) => {
-          let discussion = res && res.value && res.value.data ? res.value.data : {};
-          this.discussion = discussion
-          if(res && res.message)
-          this.service.toastSuccess(res.message)
-        },
-        err => {
-          if (err && err.value && err.value.toast && err.value.toast.message)
-            this.service.toastError(err.value.toast.message)
-        },
-      ) */
+    /*     this.loggedInUser = this.service.user;
+        this.tokenValue = this.service.token
+        let headers = new HttpHeaders();
+        headers = headers.set('Authorization', 'Bearer ' + this.tokenValue);
+        this.httpservice.request('GET', 'https://lig-intellego-api-dv.azurewebsites.net/api/discussions/' + this.paramId, { headers })
+          .subscribe(
+            (res: any) => {
+              let discussion = res && res.value && res.value.data ? res.value.data : {};
+              this.discussion = discussion
+              if(res && res.message)
+              this.service.toastSuccess(res.message)
+            },
+            err => {
+              if (err && err.value && err.value.toast && err.value.toast.message)
+                this.service.toastError(err.value.toast.message)
+            },
+          ) */
   }
 
   saveDiscussions() {
-/*     this.tokenValue = this.service.token
-    let headers = new HttpHeaders();
-    headers = headers.set('Authorization', 'Bearer ' + this.tokenValue);
-    this.httpservice.request('POST', 'https://lig-intellego-api-dv.azurewebsites.net/api/discussions/' + this.paramId + '/save', { headers })
-      .subscribe(
-        (res: any) => {
-          if(res && res.message)
-          this.service.toastSuccess(res.message)
-        },
-        err => {
-          if (err && err.value && err.value.toast && err.value.toast.message)
-            this.service.toastError(err.value.toast.message)
-        },
-      ) */
+    /*     this.tokenValue = this.service.token
+        let headers = new HttpHeaders();
+        headers = headers.set('Authorization', 'Bearer ' + this.tokenValue);
+        this.httpservice.request('POST', 'https://lig-intellego-api-dv.azurewebsites.net/api/discussions/' + this.paramId + '/save', { headers })
+          .subscribe(
+            (res: any) => {
+              if(res && res.message)
+              this.service.toastSuccess(res.message)
+            },
+            err => {
+              if (err && err.value && err.value.toast && err.value.toast.message)
+                this.service.toastError(err.value.toast.message)
+            },
+          ) */
   }
 
   addNewComment() {
- /*    let headers = new HttpHeaders();
-    headers = headers.set('Authorization', 'Bearer ' + this.tokenValue);
-    this.httpservice.request('POST', 'https://lig-intellego-api-dv.azurewebsites.net/api/discussions/' + this.paramId + '/comment/', { headers, body: { comment: this.newComment } })
-      .subscribe(
-        (res: any) => {
-          console.log("Comment Added ");
-          this.getDiscussionDetails();
-        },
-        err => {
-          if (err && err.value && err.value.toast && err.value.toast.message)
-            this.service.toastError(err.value.toast.message)
-        },
-      ) */
+    /*    let headers = new HttpHeaders();
+       headers = headers.set('Authorization', 'Bearer ' + this.tokenValue);
+       this.httpservice.request('POST', 'https://lig-intellego-api-dv.azurewebsites.net/api/discussions/' + this.paramId + '/comment/', { headers, body: { comment: this.newComment } })
+         .subscribe(
+           (res: any) => {
+             console.log("Comment Added ");
+             this.getDiscussionDetails();
+           },
+           err => {
+             if (err && err.value && err.value.toast && err.value.toast.message)
+               this.service.toastError(err.value.toast.message)
+           },
+         ) */
   }
 
   async presentAskExpertModal() {
@@ -116,17 +116,21 @@ export class DiscussionDetailsComponent implements OnInit {
   }
 
   bookMarkComment(comment) {
- /*    let headers = new HttpHeaders();
-    headers = headers.set('Authorization', 'Bearer ' + this.tokenValue);
-    this.httpservice.request('POST', 'https://lig-intellego-api-dv.azurewebsites.net/api/discussions/' + this.paramId + '/comment/' + comment.id + '/bookmark', { headers })
-      .subscribe(
-        (res: any) => {
-        },
-        err => {
-          if (err && err.value && err.value.toast && err.value.toast.message)
-            this.service.toastError(err.value.toast.message)
-        },
-      ) */
+    /*    let headers = new HttpHeaders();
+       headers = headers.set('Authorization', 'Bearer ' + this.tokenValue);
+       this.httpservice.request('POST', 'https://lig-intellego-api-dv.azurewebsites.net/api/discussions/' + this.paramId + '/comment/' + comment.id + '/bookmark', { headers })
+         .subscribe(
+           (res: any) => {
+           },
+           err => {
+             if (err && err.value && err.value.toast && err.value.toast.message)
+               this.service.toastError(err.value.toast.message)
+           },
+         ) */
+  }
+
+  startAssesment() {
+   this.service.searchObj.next({action:'assesments'})
   }
 
 }

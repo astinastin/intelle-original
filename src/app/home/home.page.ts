@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationError, ActivatedRoute, ActivationStart, ActivationEnd } from '@angular/router';
 import { PopoverController } from '@ionic/angular';
+import { Subscription } from 'rxjs';
+import { SharedserviceService } from '../sharedservice.service';
 import { DiscussionpopoverComponent } from './components/popovers/discussionpopover/discussionpopover.component';
 import { SearchSuggestionsPopover } from './components/popovers/search-suggestions-popover/search-suggestions-popover.component';
 
@@ -18,14 +20,38 @@ export class HomePage {
     size4: '2',
   }
 
-  routeUrl: any = 'Home'
+  routeUrl: any = 'Home';
+  private subscription : Subscription
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private popoverController: PopoverController) {
+    private popoverController: PopoverController,
+    private service : SharedserviceService
+    ) {
     router.events.subscribe((event: Event) => {
       this.checkRouterEvent(event);
     });
+
+    this.subscription = this.service.searchObj.asObservable().subscribe(message => {
+        this.switchTabs(message)
+    });
+
+  }
+
+
+  ngOnDestroy()
+  {
+    if(this.subscription)
+    this.subscription.unsubscribe();
+  }
+
+  switchTabs(searchObj)
+  {
+    let action = searchObj.action ? searchObj.action : ''
+    switch (action) {
+      case 'assesments': this.setAssesmentPage(searchObj); break;
+      default: this.setAssesmentPage(searchObj);
+    }
   }
 
   urlType: any = {};
@@ -113,7 +139,6 @@ export class HomePage {
   async openSearchSuggestionsPopover() {
     this.firstTime = this.firstTime + 1;
     if (this.firstTime % 2 === 0) {
-      console.log(this.firstTime);
       const popover = await this.popoverController.create({
         component: SearchSuggestionsPopover,
         translucent: true,
@@ -136,5 +161,14 @@ export class HomePage {
     else {
       this.searchEvent = { ...{}, ...{ searchValue: null } }
     }
+  }
+
+  searchObj : any = {}
+  setAssesmentPage(obj)
+  {
+    let modifiedObj = {};
+    modifiedObj['action'] = 'Assesments'
+    modifiedObj['value']  = obj
+    this.searchObj = {...{},...obj}
   }
 }

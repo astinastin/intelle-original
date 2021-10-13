@@ -59,7 +59,7 @@
             </ion-col>
             <ion-col *ngIf="canShowRecommendation" style="background: white;" size="{{colSize.size3}}">
 
-              <app-recommendations [type]="urlType" [header]="'Recommended Channel'" [elements]="recommendedChannel" [searching]="searchEvent"
+              <app-recommendations [searchObj]="searchObj" [type]="urlType" [header]="'Recommended Channel'" [elements]="recommendedChannel" [searching]="searchEvent"
                 (headerClicked)="goToChannel($event)"></app-recommendations>
 
             </ion-col>
