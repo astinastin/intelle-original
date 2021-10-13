@@ -54,31 +54,18 @@
      <h1><b>Why is Learning About Ethics is Important</b></h1>
      <br>
     
-    <ion-card>
+    <ion-card [ngClass]=" selectedAns.id == answer.id ? 'back-green' : 'back-white' " (click)="answer.isSelected = true;checkAns(answer)" *ngFor="let answer of answers">
       <ion-card-content>
-        It Helps Individuals in Different ways
+        {{answer?.answer}}
       </ion-card-content>
     </ion-card>
-     
-     <ion-card>
-      <ion-card-content>
-        It Helps Individuals in Different ways
-      </ion-card-content>
-    </ion-card>
-     
-     <ion-card>
-      <ion-card-content>
-        It Helps Individuals in Different ways
-      </ion-card-content>
-    </ion-card>
-     
-     <ion-card>
-      <ion-card-content>
-        It Helps Individuals in Different ways
-      </ion-card-content>
-    </ion-card>
+    
      
     </ion-card-content>
+
+    <div class="ion-text-center" *ngIf="selectedAns.id">
+      <h1 style="color: green;">CORRECT !</h1>
+    </div>
  
     <div class="ion-text-center">
       <ion-button (click)="nextStep()" shape="round" size="small" >Next</ion-button>
