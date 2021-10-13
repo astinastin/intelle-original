@@ -1,3 +1,51 @@
-<p>
-  assesments works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="discussions"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Assesments</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content  class="content-back">
+  <div  class="hideScroll" style="padding: 30px;background: white !important;">
+    <ion-card-content>
+     <h3><b>Lorem Ipsum Dolor</b></h3>
+     <br>
+     <p>
+      <b> At vero et accumsas et lusto odio dignissimos ducimus qui blanditiss prease ntium voluntium delenti atque
+       corrupti quos dolores et quas excepturi sint</b>
+     </p>
+     <br>
+     <mat-horizontal-stepper #stepper  orientation="horizontal">
+       <mat-step>
+       </mat-step>
+       <mat-step>
+       </mat-step>
+       <mat-step>
+       </mat-step>
+       <mat-step>
+       </mat-step>
+       <mat-step>
+         <button mat-button matStepperPrevious>Back</button>
+       </mat-step>
+     </mat-horizontal-stepper>
+     <br>
+     <p><b>Complete All Steps to Claim Reward</b></p>
+     <br>
+     <ion-chip class="action_chips" color="warning">
+       <ion-label>0/3</ion-label>
+       <ion-icon color="warning" name="trophy-outline"></ion-icon>
+     </ion-chip>
+     <ion-chip color="medium" class="action_chips">
+       <ion-label>30m</ion-label>
+       <ion-icon name="time-outline"></ion-icon>
+     </ion-chip>
+    </ion-card-content>
+ 
+    <div class="ion-text-center">
+      <ion-button (click)="startAssesment()" shape="round" size="small"  >Next</ion-button>
+    </div>
+    
+   </div>
+
+</ion-content>

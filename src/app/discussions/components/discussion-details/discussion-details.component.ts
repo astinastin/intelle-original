@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { SharedserviceService } from 'src/app/sharedservice.service';
 import { ModalController } from '@ionic/angular';
@@ -32,7 +32,8 @@ export class DiscussionDetailsComponent implements OnInit {
     private route: ActivatedRoute,
     private service: SharedserviceService,
     private httpservice: HttpClient,
-    private modalController: ModalController
+    private modalController: ModalController,
+    private router : Router
   ) {
     this.route.queryParams.subscribe(params => {
       if (params && params.id) {
@@ -130,7 +131,8 @@ export class DiscussionDetailsComponent implements OnInit {
   }
 
   startAssesment() {
-   this.service.searchObj.next({action:'assesments'})
+   this.service.searchObj.next({action:'assesments'});
+   this.router.navigate(['/home/discussions/assesments'])
   }
 
 }

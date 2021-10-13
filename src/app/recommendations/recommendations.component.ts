@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { MatStepper } from '@angular/material';
 @Component({
   selector: 'app-recommendations',
   templateUrl: './recommendations.component.html',
@@ -20,7 +21,7 @@ export class RecommendationsComponent implements OnInit {
   isActivityDetailSection : boolean = false;
   selectedTab : string = '';
   searchingNow : boolean = false;
-  
+  @ViewChild('stepper') stepper: MatStepper;
 
   switchObj: any = {}
   ngOnChanges() {
@@ -51,10 +52,9 @@ export class RecommendationsComponent implements OnInit {
       this.isActivityDetailSection = false;
       this.searchingNow = false
       this.switchObj = this.searchObj
-      console.log(this.switchObj);
-      
-      console.log("finalHit");
-      
+      setTimeout(()=>{
+        this.stepper.selectedIndex = 1; 
+      },0);
     }
 
   }

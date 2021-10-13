@@ -1,4 +1,5 @@
-<ion-content>
+<ion-content class="ion-text-center">
+  <!-- BY DEFAULT HOME SECTION -->
   <div *ngIf="!isActivityDetailSection && !searchingNow && !switchObj.action"  class="hideScroll">
     <p class="ml10">{{header}}</p>
     <ion-card-header>
@@ -55,7 +56,7 @@
     </ion-card-content>
   </div>
   
-  
+  <!-- ACTIVITY DETAILS PAGE SECTION -->
   <div *ngIf="isActivityDetailSection"  class="hideScroll">
     <p class="ml10">{{header}}</p>
    <div >
@@ -180,6 +181,7 @@
    </div>
   </div>
 
+  <!-- USER SEARCHED SECTION -->
   <div *ngIf="searchingNow">
     <p class="ml10">Filters</p>
 
@@ -214,7 +216,26 @@
 
   </div>
 
-  <div *ngIf="switchObj.action == 'assesments'">
-     Test
+  <!-- ASSESSMENTS PAGE SECTION -->
+  <div *ngIf="switchObj.action == 'assesments'" class="ion-text-center">
+    <p class="ml10">Progress</p>
+     <div class="ion-text-center" style="margin: 50px;">
+      <mat-vertical-stepper  #stepper orientation="vertical" >
+        <mat-step>
+        </mat-step>
+        <mat-step>
+        </mat-step>
+        <mat-step>
+        </mat-step>
+        <mat-step>
+        </mat-step>
+        <mat-step>
+          <button mat-button matStepperPrevious>Back</button>
+        </mat-step>
+      </mat-vertical-stepper>
+     </div>
+     <div>
+       Complete All Steps to Claim Reward
+     </div>
   </div>
 </ion-content>

@@ -22,6 +22,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSelectModule} from '@angular/material/select';
 import { MatListModule } from '@angular/material';
+import { AssesmentsComponent } from '../assesments/assesments.component';
 
 @NgModule({
   imports: [
@@ -54,6 +55,6 @@ import { MatListModule } from '@angular/material';
     DiscussionsPageRoutingModule,
     
   ],
-  declarations: [DiscussionsPage,AllDiscussionsComponent,SavedComponent,DiscussionDetailsComponent,AskComponent]
+  declarations: [DiscussionsPage,AllDiscussionsComponent,SavedComponent,DiscussionDetailsComponent,AskComponent,AssesmentsComponent]
 })
 export class DiscussionsPageModule {}
