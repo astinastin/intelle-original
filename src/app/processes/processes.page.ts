@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivationStart, Router ,Event} from '@angular/router';
+import { ActivationStart, Router, Event } from '@angular/router';
 
 @Component({
   selector: 'app-processes',
@@ -9,13 +9,13 @@ import { ActivationStart, Router ,Event} from '@angular/router';
 
 export class ProcessesPage implements OnInit {
 
-  constructor(private router: Router) { 
+  constructor(private router: Router) {
     router.events.subscribe((event: Event) => {
       this.checkRouterEvent(event);
     });
   }
 
-  routeUrl : any = '';
+  routeUrl: any = '';
   checkRouterEvent(routerEvent: Event): void {
     if (routerEvent instanceof ActivationStart) {
       if (routerEvent.snapshot.data.title) {
@@ -33,6 +33,8 @@ export class ProcessesPage implements OnInit {
       this.router.navigate(['/home/processes/library'])
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.selectedTab = 'myprocesses';
+  }
 
 }

@@ -36,6 +36,7 @@ export class DiscussionsPage implements OnInit {
   }
 
   ngOnInit() {
+    this.selectedTab = 'mydiscussionss'
   }
 
 }

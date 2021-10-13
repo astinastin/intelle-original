@@ -10,7 +10,7 @@ export class LearningPage implements OnInit {
 
   constructor(private router: Router) { }
 
-  selectedTab: any = "friends"
+  selectedTab: any = "mylearnings"
   segmentChanged(eve) {
     this.selectedTab = eve.detail.value
     if(this.selectedTab == 'mylearnings')
@@ -20,6 +20,7 @@ export class LearningPage implements OnInit {
   }
 
   ngOnInit() {
+    this.selectedTab = 'mylearnings';
   }
 
 }
