@@ -22,4 +22,11 @@ export class DiscussionpopoverComponent implements OnInit {
     this.route.navigate(['/home/contacts'])
   }
 
+  routeToParticipants()
+  {
+    this.service.searchObj.next({action:'participants'})
+    this.route.navigate(['/home/participants'])
+  }
+
+
 }

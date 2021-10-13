@@ -1,0 +1,27 @@
+.mt15
+{
+    margin-top: 15px;
+}
+
+.ml15
+{
+    margin-left: 15px;
+}
+
+
+.circle-icon {
+    position: fixed;
+    left: 32px;
+    //top: 28px;
+    background: blue;
+    color: white;
+    width: 15px;
+    height: 15px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+    vertical-align: middle;
+    padding: 2px;
+}

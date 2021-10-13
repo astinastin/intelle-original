@@ -28,6 +28,8 @@ export class HomePage {
     private popoverController: PopoverController,
     private service : SharedserviceService
     ) {
+
+    router.navigate(['/home/intelligo-home'])
     router.events.subscribe((event: Event) => {
       this.checkRouterEvent(event);
     });
@@ -60,7 +62,7 @@ export class HomePage {
   ngOnInit() {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        if (event.url.includes('activities') && event.url.includes('activity-details')) {
+         if (event.url.includes('activities') && event.url.includes('activity-details')) {
           this.urlType = { ...{}, ...{ route: event.url } }
           this.setColSize(2, 6, 2)
           this.canShowRecommendation = true;

@@ -18,6 +18,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatCardModule} from '@angular/material/card';
 import { ContactsComponent } from '../contacts/contacts.component';
+import { ParticipantsComponent } from '../participants/participants.component';
 
 @NgModule({
   
@@ -42,7 +43,8 @@ import { ContactsComponent } from '../contacts/contacts.component';
     DiscussionpopoverComponent,
     SearchSuggestionsPopover,
     ItelligeHomeComponent,
-    ContactsComponent
+    ContactsComponent,
+    ParticipantsComponent
   ]
 })
 

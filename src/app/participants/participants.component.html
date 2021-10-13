@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Participants</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <div class="mt15">
+    <ion-searchbar color="light"></ion-searchbar>
+  </div>
+
+  <div class="mt15">
+    <ion-row style="padding: 15px;">
+      <ion-col>
+        <ion-badge style="padding: 3px;border: 2px solid;border-radius: 50px;" color="tertiary">Ask an Expert
+        </ion-badge>
+
+        <ion-badge style="padding: 3px;border: 2px solid;border-radius: 50px;" class="ml15" color="light">Added
+          ({{selectedContacts?.length}})
+        </ion-badge>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <ion-list>
+    <ion-item (click)="contact.isSelected=!contact.isSelected;selectContact(contact)" *ngFor="let contact of contacts">
+      <span>
+        <div *ngIf="isExist(contact)" class="circle-icon">
+          <ion-icon style="margin-bottom: 25px" name="checkmark-outline"></ion-icon>
+        </div>
+        <img style="width: 25px;height: 25px;border-radius:25px"
+          src="https://mdbootstrap.com/img/Photos/Others/images/76.jpg">
+      </span>
+      <span style="margin-left: 5px;">{{contact?.name}}</span>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
