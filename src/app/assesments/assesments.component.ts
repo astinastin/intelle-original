@@ -14,9 +14,20 @@ export class AssesmentsComponent implements OnInit {
 
   ngOnInit() { }
 
+  step : string = '1;'
+  ionViewDidEnter()
+  {
+    this.step = '1'
+  }
+
   ngAfterViewInit() {
     setTimeout(() => {
       this.stepper.selectedIndex = 1;
     }, 0);
+  }
+
+  nextStep()
+  {
+    this.step ='2'
   }
 }

@@ -3,11 +3,12 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="discussions"></ion-back-button>
     </ion-buttons>
-    <ion-title>Assesments</ion-title>
+    <ion-title *ngIf="step == '1'">Assesments</ion-title>
+    <ion-title *ngIf="step == '2'">Questions 3/6</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content  class="content-back">
-  <div  class="hideScroll" style="padding: 30px;background: white !important;">
+  <div *ngIf="step == '1'" class="hideScroll" style="padding: 30px;background: white !important;">
     <ion-card-content>
      <h3><b>Lorem Ipsum Dolor</b></h3>
      <br>
@@ -43,7 +44,44 @@
     </ion-card-content>
  
     <div class="ion-text-center">
-      <ion-button (click)="startAssesment()" shape="round" size="small"  >Next</ion-button>
+      <ion-button (click)="nextStep()" shape="round" size="small" >Next</ion-button>
+    </div>
+    
+   </div>
+
+   <div *ngIf="step == '2'" class="hideScroll" style="padding: 30px;background: white !important;">
+    <ion-card-content>
+     <h1><b>Why is Learning About Ethics is Important</b></h1>
+     <br>
+    
+    <ion-card>
+      <ion-card-content>
+        It Helps Individuals in Different ways
+      </ion-card-content>
+    </ion-card>
+     <br>
+     <ion-card>
+      <ion-card-content>
+        It Helps Individuals in Different ways
+      </ion-card-content>
+    </ion-card>
+     <br>
+     <ion-card>
+      <ion-card-content>
+        It Helps Individuals in Different ways
+      </ion-card-content>
+    </ion-card>
+     <br>
+     <ion-card>
+      <ion-card-content>
+        It Helps Individuals in Different ways
+      </ion-card-content>
+    </ion-card>
+     <br>
+    </ion-card-content>
+ 
+    <div class="ion-text-center">
+      <ion-button (click)="nextStep()" shape="round" size="small" >Next</ion-button>
     </div>
     
    </div>
