@@ -9,14 +9,29 @@ import { RecommendationsComponent } from '../recommendations/recommendations.com
 import { DiscussionpopoverComponent } from './components/popovers/discussionpopover/discussionpopover.component';
 import { SearchSuggestionsPopover } from './components/popovers/search-suggestions-popover/search-suggestions-popover.component';
 import { ItelligeHomeComponent } from '../itellige-home/itellige-home.component';
-
+import {MatStepperModule  } from '@angular/material/stepper';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    MatStepperModule,
+    ReactiveFormsModule,
+    MatIconModule,
+    MatInputModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatRadioModule,
+    MatCardModule
   ],
   declarations: [HomePage,RecommendationsComponent,DiscussionpopoverComponent,SearchSuggestionsPopover,ItelligeHomeComponent]
 })

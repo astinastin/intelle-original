@@ -1,5 +1,5 @@
 <ion-content>
-  <div *ngIf="showRec && !isActivityDetailSection"  class="hideScroll">
+  <div *ngIf="showRec && !isActivityDetailSection && !searchingNow"  class="hideScroll">
     <p class="ml10">{{header}}</p>
     <ion-card-header>
       <ion-img [src]="'https://mdbootstrap.com/img/Photos/Others/images/76.jpg'" class="width100"></ion-img>
@@ -56,7 +56,7 @@
   </div>
   
   
-  <div *ngIf="showRec && isActivityDetailSection"  class="hideScroll">
+  <div *ngIf="showRec && isActivityDetailSection &&  !searchingNow"  class="hideScroll">
     <p class="ml10">{{header}}</p>
    <div >
     <ion-card-content style="box-shadow: 0px 0px 1px 0px;">
@@ -178,5 +178,39 @@
       </ion-card-content>
     </ion-card>
    </div>
+  </div>
+
+  <div *ngIf="searchingNow">
+    <p class="ml10">Filters</p>
+
+    <ion-chip class="action_chips" style="border: 2px solid;" color="light">
+      <ion-icon color="warning" name="trophy-outline"></ion-icon>
+      <ion-label style="color: black;">Learning</ion-label>
+    </ion-chip>
+
+    <br>
+    <ion-chip class="action_chips" style="border: 2px solid;" color="light">
+      <ion-icon color="danger" name="trophy-outline"></ion-icon>
+      <ion-label style="color: black;">Processes</ion-label>
+    </ion-chip>
+
+    <br>
+    <ion-chip class="action_chips" style="border: 2px solid;" color="light">
+      <ion-icon color="primary" name="trophy-outline"></ion-icon>
+      <ion-label style="color: black;">Content Discussions</ion-label>
+    </ion-chip>
+
+    <br>
+    <ion-chip class="action_chips" style="border: 2px solid;" color="light">
+      <ion-icon color="warning" name="trophy-outline"></ion-icon>
+      <ion-label style="color: black;">General Discussions</ion-label>
+    </ion-chip>
+
+    <br>
+    <ion-chip class="action_chips" style="border: 2px solid;" color="light">
+      <ion-icon color="secondary" name="trophy-outline"></ion-icon>
+      <ion-label style="color: black;">Ideas</ion-label>
+    </ion-chip>
+
   </div>
 </ion-content>

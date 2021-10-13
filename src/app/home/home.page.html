@@ -5,7 +5,6 @@
         <ion-grid style="height: 100%;">
           <ion-row style="height: 100%;" nowrap>
             <ion-col size="{{colSize.size1}}" style="background: white;">
-
               <ion-list>
                 <ion-item lines="none">
                   <ion-avatar slot="start">
@@ -16,7 +15,7 @@
                   <ion-icon slot="end" class="f20" name="notifications-outline"></ion-icon>
                 </ion-item>
               </ion-list>
-              <ion-searchbar (ionFocus)="openSearchSuggestionsPopover()" showCancelButton="never"></ion-searchbar>
+              <ion-searchbar [(ngModel)]="searchValue" (ionChange)="searching($event)" (ionFocus)="openSearchSuggestionsPopover()" showCancelButton="never"></ion-searchbar>
               <ion-item-divider></ion-item-divider>
               <ion-list class="menu_list">
                 <ion-item lines="none" (click)="navigateToHome();selectedTab='home'"
@@ -60,7 +59,7 @@
             </ion-col>
             <ion-col *ngIf="canShowRecommendation" style="background: white;" size="{{colSize.size3}}">
 
-              <app-recommendations [type]="urlType" [header]="'Recommended Channel'" [elements]="recommendedChannel"
+              <app-recommendations [type]="urlType" [header]="'Recommended Channel'" [elements]="recommendedChannel" [searching]="searchEvent"
                 (headerClicked)="goToChannel($event)"></app-recommendations>
 
             </ion-col>

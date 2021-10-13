@@ -93,10 +93,12 @@
   }
 
   .modal-wrapper {
-    --width: 60%;
+    --width: 40%;
     --height: 40%;
   }
 
+
+  .mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit { background-color: green; color: #fff; }
 
   .discussion-class .popover-content {
     top: 450px !important;
@@ -127,3 +129,5 @@
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
+
+  

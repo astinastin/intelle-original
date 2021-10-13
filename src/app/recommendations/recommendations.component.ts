@@ -11,6 +11,7 @@ export class RecommendationsComponent implements OnInit {
   @Input() type: any;
   @Input() header: any;
   @Input() elements: any;
+  @Input() searching: any;
   @Output() headerClicked = new EventEmitter();
 
   ngOnInit() { }
@@ -18,6 +19,7 @@ export class RecommendationsComponent implements OnInit {
   showRec: boolean = false;
   isActivityDetailSection : boolean = false;
   selectedTab : string = '';
+  searchingNow : boolean = false;
   ngOnChanges() {
     if (this.type) {
       this.isActivityDetailSection = false;
@@ -31,6 +33,14 @@ export class RecommendationsComponent implements OnInit {
       else if (!this.type.route.includes('activities')) {
         this.showRec = true;
       }
+    }
+
+    if(this.searching)
+    {
+      if(this.searching.searchValue && this.searching.searchValue.length)
+      this.searchingNow = true;
+      else
+      this.searchingNow = false;
     }
 
   }

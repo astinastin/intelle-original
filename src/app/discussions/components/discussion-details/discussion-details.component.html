@@ -126,6 +126,42 @@
       </ion-row>
   
     </ion-card>
+
+   <ion-card-content style="background: #f6efef !important">
+    <div class="content-back">
+      <div class="mt25 ml-5">EPISODE ASSIGNMENTS</div>
+    <mat-vertical-stepper  orientation="vertical">
+      <mat-step>
+        <ion-card>
+
+          <ion-card-header class="p0">
+            <ion-img [src]="'https://mdbootstrap.com/img/Photos/Others/images/76.jpg'" class="w100"></ion-img>
+          </ion-card-header>
+    
+          <ion-card-content style="padding: 10px;">
+            <p class="mt15">Created By <span style="color: blue;">Franchis Paramore</span> on {{ "21:08:1998" | date : 'medium'}}</p>
+            <br>
+            <ion-badge color="danger" class="ml5 mt15">
+              <span class="ml2">Content Related</span>
+            </ion-badge>
+            <br>
+            <ion-card-title class="mt15"><b>Duis aute irure dolor in reprehenderit in volupate velit esse</b></ion-card-title>
+            <br>
+            <p>
+              At vero et accumsas et lusto odio dignissimos ducimus qui blanditiss prease ntium voluntium delenti atque
+              corrupti quos dolores et quas excepturi sint
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </mat-step>
+      <mat-step>
+        <p>This content was rendered eagerly</p>
+        <button mat-button matStepperPrevious>Back</button>
+      </mat-step>
+    </mat-vertical-stepper>
+    </div>
+   </ion-card-content>
+    
   </div>
 
   

@@ -29,8 +29,8 @@ export class HomePage {
   }
 
   urlType: any = {};
-  selectedTab : string = '';
-  recommendedChannel : any = [];
+  selectedTab: string = '';
+  recommendedChannel: any = [];
   ngOnInit() {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
@@ -104,23 +104,37 @@ export class HomePage {
     const popover = await this.popoverController.create({
       component: DiscussionpopoverComponent,
       translucent: true,
-      showBackdrop: false,cssClass : 'discussion-class'
+      showBackdrop: false, cssClass: 'discussion-class'
     });
     return await popover.present();
   }
 
+  firstTime: number = 2;
   async openSearchSuggestionsPopover() {
-    const popover = await this.popoverController.create({
-      component: SearchSuggestionsPopover,
-      translucent: true,
-      showBackdrop: false,
-      cssClass : 'search-placeholder-class'
-    });
-    return await popover.present();
+    this.firstTime = this.firstTime + 1;
+    if (this.firstTime % 2 === 0) {
+      console.log(this.firstTime);
+      const popover = await this.popoverController.create({
+        component: SearchSuggestionsPopover,
+        translucent: true,
+        showBackdrop: false,
+        cssClass: 'search-placeholder-class'
+      });
+      return await popover.present();
+    }
   }
 
-  goToChannel(ev)
-  {
+  goToChannel(ev) {
 
+  }
+
+  searchEvent: any = {};
+  searchValue: string = '';
+  searching(ev) {
+    if (ev.detail.value && ev.detail.value && ev.detail.value.length)
+      this.searchEvent = { ...{}, ...{ searchValue: ev.detail.value } }
+    else {
+      this.searchEvent = { ...{}, ...{ searchValue: null } }
+    }
   }
 }
